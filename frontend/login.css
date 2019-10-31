@@ -1,0 +1,79 @@
+.banner{
+    background-color: rgb(51,62,84);
+    width: 100%;
+    /* vh螢幕可視範圍高度的百分比 */
+    height: 8vh;
+}
+.dropbtn {
+    color: white;
+    padding: 12px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    float:right;
+  }
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+.background {
+    background: url(img/login_bg.png) center no-repeat;
+    height: auto;
+    width: 100%;
+    display: table;
+    background-size: cover;
+}
+
+.leftback {
+    background-color: rgba(0,0,0,0.2);
+    height: 100%;
+    width: 100%;
+}
+
+.main_text{
+    color:rgb(0, 0, 0);
+    display: table-cell;
+    vertical-align: middle;
+    /* height: 100%;
+    width: 100%; */
+    height: 500pt;
+    width: 520pt;
+} 
+
+.title-type{
+    text-align : center;
+    font-family : "Microsoft JhengHei";
+    font-weight : bold;
+}
+
+.text-type{
+    padding-left: 20%;
+    list-style: none;
+    /* list-style: circle; */
+    font-family : "Microsoft JhengHei";
+    font-weight : bold;
+}
+
+
+.login-box{
+    color:#c4c2c2;
+    /* display: table-cell; */
+    text-align: center;
+    font-family : "Microsoft JhengHei";
+    font-weight : bold;
+    padding-top: 50px;
+}
