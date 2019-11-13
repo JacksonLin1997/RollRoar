@@ -1,0 +1,41 @@
+.banner{
+    background-color: rgb(51,62,84);
+    width: 100%;
+    /* vh螢幕可視範圍高度的百分比 */
+    height: 8vh;
+}
+.dropbtn {
+    color: white;
+    padding: 1.5vh;
+    font-size: 16px;
+    background-color: rgb(51,62,84);
+    float:left;
+  }
+
+.background {
+    background-color: #edeadc;
+    width: 100%;
+    /* height: auto; */
+    display: table;
+    background-size: cover;
+}
+
+.carousel {
+    margin:0 auto;
+}
+
+.text-type{
+    /* font-size : 14pt; */
+    font-family : "Microsoft JhengHei";
+    font-weight : bold;
+}
+
+.carousel-item{
+    height: 350pt;
+}
+
+.card{
+    margin:10pt;
+    /* width: 18rem;      */
+    width: 23vw; 
+}
