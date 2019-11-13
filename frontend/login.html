@@ -1,91 +1,73 @@
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="login.css">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-        <title>登入</title>
-    </head>
-      
-    <body>
-        <!-- <div class="container"> -->
-            <div class="banner">
-                <div class="dropdown">
-                    <a class="dropdown-toggle dropbtn" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Language</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <a class="dropdown-item" href="#">English</a>
-                        <a class="dropdown-item" href="#">繁體中文</a>
-                    </div>
-                </div>
-            </div>
-            <div class="background">
-                <div class="row">
-                    <!-- <div class="col-sm-6" style="background-color: rgba(0,0,0,0.2);"> -->
-                    <div class="col-sm-6" style="background-color: rgba(0,0,0,0);">
-                        <div class="main_text">
-                            <h1 class="title-type">Welcome to TalkTalk. </h1>
-                            <ul class="text-type">
-                            　<li>專為議題討論設計，意見集中不失焦的淨土。</li>
-                            　<li>以議題為單位，易於整合與分析。</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="row login-box">
-                            <div class="col-sm-3"></div>
-                            <div class="col-sm-6">                       
-                                <div class="logo">
-                                    <div class="wrap">
-                                        <a href="index.php"><img src="img/logo.jpg" alt=""></a>
-                                    </div>
-                                </div>
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Talktalk</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'><link rel="stylesheet" href="./login.css">
+<!-- partial -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</head>
 
-                                <div class="user_photo">
-                                    <img src="img/user_photo_2.jpg" alt="">
-                                </div>
-                                <br><br>
-                                <form action="includes/login.inc.php" method="post"> 
-                                    <!-- 信箱 -->
-                                    <div class="form-group" style="padding-left: 10pt; padding-right: 10pt">
-                                        <input type="email" class="form-control" name="mailuid" placeholder="使用者名稱/信箱" required>
-                                    </div>
-                                    <!-- 密碼 -->
-                                    <div class="form-group" style="padding-left: 10pt; padding-right: 10pt">
-                                        <input type="password" class="form-control" name="pwd" placeholder="密碼" required>
-                                    </div>
-                                    <!-- 記住我 -->
-                                        <div class="form-group custom-control custom-checkbox " style="margin: 1vh 4vh 1vh; padding: 0pt 1vh; text-align:left">
-                                            <input class="custom-control-input" type="checkbox" id="customCheck1">
-                                            <label class="custom-control-label" for="customCheck1" style="color:#808080">記住我</label>
-                                            <a href="" style="color:#808080; float:right;">忘記密碼? </a>
-                                        </div>
-                                    <!-- 提交 -->
-                                    <!-- <button type="submit" class="btn btn-primary">Log in</button> -->
-                                    <a href="home.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Log in</a>
-                                </form>
+<body>
 
-                                <h6 style="color:#808080; font-size:10pt">or sign in with</h6>
-                                <hr style="color:#808080">
-                                <div>
-                                    <img src="img/social_logo/login_fb.png"style="width: 120pt; padding: 3pt">
-                                    <img src="img/social_logo/login_line.png"style="width: 120pt; padding: 3pt">
-                                    <!-- <img src="img/social_logo/facebook.png" style="padding: 5pt">
-                                    <img src="img/social_logo/line.png" style="padding: 5pt">
-                                    <img src="img/social_logo/google-plus.png"style="padding: 5pt">
-                                    <div style="color:#808080; font-size:8pt">Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"             title="Flaticon">www.flaticon.com</a></div> -->
-                                </div>
-                                <br>
-                                <a href="register.php" style="color:#808080; font-size:10pt">I am a new user. Sign up.</a>
-                            </div>
-                            <div class="col-sm-3"></div>
-                        </div>
-                    </div>
-                </div>
+<nav class="navbar navbar-dark bg-dark">
+  <div class="left"></div><a class="navbar-brand mx-auto" href="#"> 
+    <div class="logo"></div>
+    <h4>說說</h4></a>
+  <form class="form-inline">
+    <div class="dropdown">
+        <a class="dropdown-toggle dropbtn" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Language</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <a class="dropdown-item" href="#">English</a>
+            <a class="dropdown-item" href="#">繁體中文</a>
+        </div>
+    </div>
+  </form>
+</nav>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-1"></div>    
+    <div class="col-md-5 pic1">      
+      <div class="textpanel">
+        <h1>歡迎 說說!</h1>
+        <p>"Our mission at TalkTalk is to inspire every person in the world to take a stand and make a difference."</p>
+        <p>"Simply make a difference by using our product to showr your stance on the internet."</p>
+        <p>"Start discussion, make contribution."</p>
+      </div>
+    </div>
+    <div class="col-md-5 pic2">
+      <div class="login-form">
+        <h1>Log in</h1>
+        <form>
+          <div class="form-group1">
+            <input class="form-control" type="text" placeholder="Username OR Email" required="required"/>
+          </div>
+          <div class="form-group2">
+            <input class="form-control" type="password" placeholder="Password" required="required"/>
+          </div>
+          <div class="form-group3">
+            <button class="btn btn-primary" type="submit">登入</button>
+          </div>
+          <div class="clearfix">
+            <label class="pull-left checkbox-inline"></label>
+            <input type="checkbox"/> 記住我<a class="pull-right" href="#">忘記密碼</a>
+          </div>
+          <div class="sign-other"> 
+            <p>or sign in with</p>
+            <div class="signpics">
+              <div class="fb"></div>
+              <div class="line"></div>
             </div>
-        <!-- </div> -->
-    </body>
+          </div>
+          <div class="newuser">I'm a new user. <a href="">Sign up.</a></div>
+        </form>
+      </div>
+    </div>
+    <div class="col-md-1"></div>  
+  </div>
+</div>
+
+</body>
 </html>
