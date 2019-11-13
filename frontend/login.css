@@ -6,34 +6,16 @@
 }
 .dropbtn {
     color: white;
-    padding: 12px;
-    font-size: 14px;
-    border: none;
-    cursor: pointer;
-    background-color: transparent;
+    padding: 1.5vh;
+    font-size: 16px;
+    background-color: rgb(51,62,84);
     float:right;
-  }
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  /* Links inside the dropdown */
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
   }
 
 .background {
     background: url(img/login_bg.png) center no-repeat;
-    height: auto;
     width: 100%;
+    /* height: auto; */
     display: table;
     background-size: cover;
 }
