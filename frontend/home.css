@@ -30,7 +30,7 @@
     font-weight : bold;
 }
 
-.carousel-item{
+.top_pic{
     height: 350pt;
 }
 
@@ -38,4 +38,18 @@
     margin:10pt;
     /* width: 18rem;      */
     width: 23vw; 
+}
+
+.btn-outline-dark{
+    font-family : "Microsoft JhengHei";
+    font-weight : bold;
+    width: 100px;
+    margin:5px;
+}
+
+.btn btn-dark{
+    font-family : "Microsoft JhengHei";
+    font-weight : bold;
+    height:30px; 
+    margin: 10px;
 }
