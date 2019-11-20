@@ -1,0 +1,128 @@
+@charset "UTF-8";
+* {
+  /* border: solid 1px; */
+  font-family: 微軟正黑體;
+  position: relative;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-weight: bold;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #d5d1c6;
+}
+
+.left {
+  display: inline-block;
+  width: 7%;
+  height: 100%;
+}
+
+a.navbar-brand.mx-auto h4 {
+  display: inline-block;
+}
+
+.logo {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+}
+
+.dropbtn {
+  color: white;
+  padding: 1.5vh;
+  font-size: 16px;
+  background-color: transparent;
+  float:left;
+}
+
+.container-fluid .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container-fluid .row .col-md-5.pic1 {
+  background-image: url(https://i.imgur.com/DITety2.png);
+  background-size: auto 140%;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+.container-fluid .row .col-md-5.pic1 .textpanel {
+  margin: 10%;
+}
+.container-fluid .row .col-md-5.pic1 .textpanel h1 {
+  margin: 2px;
+}
+.container-fluid .row .col-md-5.pic1 .textpanel p {
+  font-size: 120%;
+  margin: 2px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.container-fluid .row .col-md-5.pic2{
+  padding: 1%;
+}
+
+.container-fluid .row .col-md-5.pic2 .login-form {
+  margin: 10%;
+}
+.container-fluid .row .col-md-5.pic2 .login-form h1 {
+  padding: 5px;
+  text-align: center;
+}
+.container-fluid .row .col-md-5.pic2 .login-form .form-group1 {
+  margin: 10px;
+}
+.container-fluid .row .col-md-5.pic2 .login-form .form-group2 {
+  margin: 10px;
+}
+.container-fluid .row .col-md-5.pic2 .login-form .form-group3 {
+  text-align: center;
+}
+.container-fluid .row .col-md-5.pic2 .login-form .clearfix {
+  margin: 10px;
+}
+.container-fluid .row .col-md-5.pic2 .login-form .clearfix a.pull-right {
+  float: right !important;
+}
+.container-fluid .row .col-md-5.pic2 .login-form .sign-other {
+  margin: 10px;
+}
+.container-fluid .row .col-md-5.pic2 .login-form .sign-other p {
+  text-align: center;
+  border-bottom: solid 3px #777;
+}
+.container-fluid .row .col-md-5.pic2 .login-form .sign-other .signpics {
+  text-align: center;
+}
+.container-fluid .row .col-md-5.pic2 .login-form .sign-other .signpics .fb {
+  display: inline-block;
+  width: 110px;
+  height: 40px;
+  background-image: url(https://i.imgur.com/TjXh7JQ.png);
+  background-size: auto 160%;
+  background-position: center center;
+  border-radius: 10px;
+}
+.container-fluid .row .col-md-5.pic2 .login-form .sign-other .signpics .line {
+  display: inline-block;
+  width: 110px;
+  height: 40px;
+  background-image: url(https://i.imgur.com/xxqUtSm.png);
+  background-size: auto 130%;
+  background-position: center center;
+  border-radius: 10px;
+}
+.container-fluid .row .col-md-5.pic2 .login-form .newuser {
+  margin: 10px;
+}
+.container-fluid .row .col-md-5.pic2 .login-form .newuser a {
+  display: inline;
+}
