@@ -4,7 +4,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="home.css">
-        <script type="text/javascript" src="home.js"></script>
         <!-- bootstrap cdn -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -19,10 +18,10 @@
     <body class="background text-type">
         <!-- <div class="container"> -->
             <div class="banner">
-                <div class="row">
+                <div class="row" style="padding-top:0.5%; padding-bottom:0.5%">
                     <div class="col-sm-1">
                         <div class="dropdown">
-                            <a class="dropdown-toggle dropbtn" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size: 10pt;margin-top:2vh;">Language</a>
+                            <a class="dropdown-toggle dropbtn" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size: 10pt;">Language</a>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                 <a class="dropdown-item" href="#">English</a>
                                 <a class="dropdown-item" href="#">繁體中文</a>
@@ -31,15 +30,15 @@
                     </div>
                     <div class="col-sm-3">
                         <i class="fas fa-search" style="color: whitesmoke;"></i>
-                        <input type="text" style="color:whitesmoke; border-radius:10pt; margin-top:2.5vh; border-block-color: white; background-color: transparent;"> 
+                        <input type="text" style="color:whitesmoke; border-radius:10pt; border-block-color: white; background-color: transparent;"> 
                     </div>
                     <div class="col-sm-4" >
-                            <p class="text-type" style="color:#ffffff;text-align: center;"><img src="img/logo.png" style="margin: 3pt; height:90%;">說說</p>
+                            <p style="color:#ffffff;text-align: center; font-size: 16pt;"><img src="img/logo.png">說說</p>
                     </div>
                     <div class="col-sm-4">
                         <div style="float: right; padding: 3pt">
                             <img src="img/coin.png">
-                            <span class="badge badge-pill badge-light" style="margin-right: 10pt;">$10000</span>
+                            <span class="badge badge-pill badge-light" >$10000</span>
                             <img src="img/bell.png" style="margin: 10pt;">
                             <img src="img/user.png" class="dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -50,7 +49,7 @@
                     </div>
                 </div>
             </div>
-
+            <!-- 輪播圖片 -->
             <div class="row">
                 <div id="carousel" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
@@ -99,6 +98,7 @@
                     </a>
                 </div>
             </div>
+            <!-- 各類型圖示 -->
             <div class="container">
                 <!-- 我的賭局 -->
                 <h4 class="text-type" style="padding-top: 40pt;"><img src="img/main_theme1.png">&nbsp&nbsp我的賭局</h4>
@@ -136,7 +136,7 @@
                                             <h5 class="card-title">光年之外</h5>
                                             <p class="card-text">你今天登陸月球了嗎?</p>
                                             <i class="far fa-clock" style="font-size: 9pt; margin-right: 8pt"> 2019.11.11-2020.11.11</i>
-                                            <button type="button" class="btn btn-light" style="border-radius: 20px;"><img src="img/coin.png"> 500</button>
+                                            <button type="button" class="btn btn-light" style="border-radius: 20px; "><img src="img/coin.png"> 500</button>
                                         </div>
                                     </article>
                                 </div>
@@ -510,7 +510,7 @@
                     </div>
                 </div>  
             </div>    
-        </div>
+        <!-- </div> -->
     </body>
     <footer class="navbar-static-bottom">
         <div class="banner">
