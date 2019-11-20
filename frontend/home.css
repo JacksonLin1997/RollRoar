@@ -2,6 +2,7 @@
     background-color: rgb(51,62,84);
     width: 100%;
 }
+
 .dropbtn {
     color: white;
     padding: 1.5vh;
@@ -28,7 +29,7 @@
 }
 
 .top_pic{
-    height: 350pt;
+    height: 400px;
 }
 
 .card{
@@ -42,9 +43,13 @@
     margin:5px;
 }
 
-.btn btn-dark{
+.btn-dark{
     font-family : "Microsoft JhengHei";
     font-weight : bold;
     height:30px; 
     margin: 10px;
+}
+
+.btn-light{
+    box-shadow:3pt;
 }
