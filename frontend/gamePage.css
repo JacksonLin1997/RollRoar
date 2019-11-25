@@ -1,0 +1,384 @@
+.header{
+    display: flex;
+    width: 1440px;
+    height: 68px;
+    padding-right: 44px;
+    background-color: #333e54;
+    align-items: center;
+    box-sizing: border-box;
+}
+.header .select_language{
+    width: 112px;
+    text-align: center;
+}
+.header .select_language a{
+    text-decoration: none;
+    color: #edeadb;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    display: inline-block;
+}
+.header .vertical_line{
+    border-left: 1px solid #707070;
+    height: 68px;
+    margin-right: 36px;
+}
+.header input{
+    margin-left: 8px;
+    width: 100px;
+    height: 28px;
+    border: 2px solid #5D6982;
+    font-size: 14px;
+    color: #edeadb;
+    padding-left: 15px;
+    border-radius: 15px;
+    background-color: #333e54;
+    transition: width 0.4s ease-in-out;
+}
+.header input:focus{
+    outline: none;
+    width: 257px;
+}
+.header .logo{
+    margin: auto;
+}
+.header .logo a{
+    text-decoration: none;
+    width: 100%;
+    color: #edeadb;
+    font-size: 24px;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: bold;
+    display: inline-block;
+}
+.header .user_points{
+    margin-left: 8px;
+    width: 112px;
+    height: 42px;
+    border: 1px solid #edeadb;
+    font-size: 24px;
+    color: #ffffff;
+    text-align: right;
+    line-height: 42px;
+    padding-right: 15px;
+    border-radius: 30px;
+    background-color: #212834;
+}
+.header .notification{
+    margin: 0 24px;
+}
+
+.subject{
+    width: 1440px;
+    background-image: url('img/vote_bg1.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #edead2;
+}
+.subject h1{
+    padding: 48px 0 32px;
+    text-align: center;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: bold;
+    font-size: 41px;
+    color: #4f4f4f;
+}
+.subject img{
+    display: block;
+    margin: auto;
+}
+.subject h3{
+    margin: 0 auto;
+    padding: 20px 0 104px;
+    width: 922px;
+    font-family: 'Noto Sans TC', sans-serif;
+    line-height: 36px;
+    font-size: 24px;
+    color: #4f4f4f;
+}
+
+.voting{
+    width: 1440px;
+    background-image: url('img/vote_bg2.png');
+    background-repeat: no-repeat;
+    background-color: #ced3d7;
+}
+.voting .main{
+    display: flex;
+}
+.voting .main h2{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: bold;
+    font-size: 36px;
+    color: #ffffff;
+    padding: 140px 26px 0 138px;
+}
+.voting .main .pool_total{
+    width: 224px;
+    height: 84px;
+    border-radius: 104px;
+    border: 3px solid #44bbff;
+    background-color: rgba(237, 234, 219, 0.09);
+    margin-top: 128px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    color: #ffffff;
+    display: inline-block;
+    line-height: 84px;
+}
+.voting .main .question{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: bold;
+    font-size: 28px;
+    color: #edeadb;
+    padding-top: 288px;
+    margin: auto;
+    text-align: center;
+}
+.voting .main .question hr{
+    margin-top: 24px;
+    border: 1px solid #edeadb;
+    width: 90%;
+}
+.voting .main .question .chart{
+    display: flex;
+    padding-top: 150px;
+}
+.voting .main .question .chart .chart1{
+    padding-right: 56px;
+}
+.voting .main .question .chart .chart1 h4{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 36px;
+    color: #53b1bd;
+    padding-bottom: 14px;
+}
+.voting .main .question .chart .chart2 h4{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 36px;
+    color: #f7e591;
+    padding-bottom: 20px;
+}
+.voting .main .question .chart .chart1 h5{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 36px;
+    color: #53b1bd;
+    padding-top: 20px;
+}
+.voting .main .question .chart .chart2 h5{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 36px;
+    color: #f7e591;
+    padding-top: 14px;
+}
+.voting .main .question .vote_button{
+    margin-top: 62px;
+    position: relative;
+}
+.voting .main .question .vote_button .vote_text{
+    position: absolute;
+    top: 45%;
+    left: 53%;
+    transform: translate(-50%, -50%);
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    color: #ffffff;
+}
+.voting .main .countdown{
+    display: flex;
+}
+.voting .main .countdown .day{
+    width: 58px;
+    height: 58px;
+    border-radius: 8px;
+    background-color: #edeadb;
+    margin-top: 128px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+    color: #666666;
+    text-align: center;
+    display: inline-block;
+    line-height: 58px;
+}
+.voting .main .countdown .day .day_text{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 17px;
+    color: #edeadb;
+}
+.voting .main .countdown .hour1{
+    width: 58px;
+    height: 58px;
+    border-radius: 8px;
+    background-color: #edeadb;
+    margin-top: 128px;
+    margin-left: 12px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+    color: #666666;
+    text-align: center;
+    display: inline-block;
+    line-height: 58px;
+}
+.voting .main .countdown .hour1 .hour_text{
+    padding-left: 45px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 17px;
+    color: #edeadb;
+}
+.voting .main .countdown .hour2{
+    width: 58px;
+    height: 58px;
+    border-radius: 8px;
+    background-color: #edeadb;
+    margin-top: 128px;
+    margin-left: 4px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+    color: #666666;
+    text-align: center;
+    display: inline-block;
+    line-height: 58px;
+}
+.voting .main .countdown .minute1{
+    width: 58px;
+    height: 58px;
+    border-radius: 8px;
+    background-color: #edeadb;
+    margin-top: 128px;
+    margin-left: 12px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+    color: #666666;
+    text-align: center;
+    display: inline-block;
+    line-height: 58px;
+}
+.voting .main .countdown .minute1 .minute_text{
+    padding-left: 35px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 17px;
+    color: #edeadb;
+}
+.voting .main .countdown .minute2{
+    width: 58px;
+    height: 58px;
+    border-radius: 8px;
+    background-color: #edeadb;
+    margin-top: 128px;
+    margin-left: 4px;
+    margin-right: 130px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+    color: #666666;
+    text-align: center;
+    display: inline-block;
+    line-height: 58px;
+}
+.voting .comment{
+    padding-top: 144px;
+}
+.voting .comment h1{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 28px;
+    color: #4f4f4f;
+}
+.voting .comment hr{
+    border: 2px solid #4f4f4f;
+    margin-top: 15px;
+    width: 9%;
+}
+.voting .comment h2{
+    padding: 44px 0 24px 150px;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 17px;
+    color: #4f464f;
+}
+.voting .comment .message{
+    padding-left: 150px;
+    display: flex;
+    align-items: center;
+    padding-bottom: 144px;
+}
+.voting .comment .message img{
+    width: 76px;
+    height: 76px;
+    padding-right: 24px;
+}
+.voting .comment .message input{
+    width: 964px;
+    height: 100px;
+    border-radius: 38px;
+    padding-left: 24px;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: bold;
+    font-size: 23px;
+    color: #d7d7d7;
+    background-color: #ffffff;
+    transition: 0.5s;
+}
+.voting .comment .message input:focus{
+    outline: none;
+    border: 3px solid #555;
+}
+
+.footer{
+    display: flex;
+    width: 1440px;
+    height: 72px;
+    padding-left: 68px;
+    background-color: #333e54;
+    align-items: center;
+    box-sizing: border-box;
+    position: relative;
+}
+.footer .copyright{
+    margin-left: 14px;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    color: #edeadb;
+}
+.footer .contact{
+    display: flex;
+    clear: both;
+    float: right;
+    position: absolute;
+    right: 68px;
+    align-items: center;
+}
+.footer .contact h4{
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    color: #edeadb;
+    margin-right: 58px;
+}
+.footer .contact .space{
+    width: 36px;
+}
+.footer .contact h5{
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    color: #edeadb;
+}
+.footer .contact h6{
+    font-size: 14px;
+    font-family: 'Noto Sans TC', sans-serif;
+    color: #edeadb;
+}

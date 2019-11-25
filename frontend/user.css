@@ -1,6 +1,7 @@
 .banner{
     background-color: rgb(51,62,84);
     width: 100%;
+    /* vh螢幕可視範圍高度的百分比 */
 }
 
 .dropbtn {
@@ -10,17 +11,15 @@
     background-color: rgb(51,62,84);
     float:left;
   }
-
+  
 .background {
     background-color: #edeadc;
+    /* background-image:url(img/collect_bg.png);
+    background-size: cover; */
     width: 100%;
     /* height: auto; */
     display: table;
     background-size: cover;
-}
-
-.carousel {
-    margin:0 auto;
 }
 
 .text-type{
@@ -28,28 +27,6 @@
     font-family : "Microsoft JhengHei";
 }
 
-.top_pic{
-    /* height: 70vh; */
-}
-
 .card{
     margin:10pt;
-}
-
-.btn-outline-dark{
-    font-family : "Microsoft JhengHei";
-    font-weight : bold;
-    width: 100px;
-    margin:5px;
-}
-
-.btn-dark{
-    font-family : "Microsoft JhengHei";
-    font-weight : bold;
-    height:30px; 
-    margin: 10px;
-}
-
-.btn-light{
-    box-shadow:3pt;
 }
