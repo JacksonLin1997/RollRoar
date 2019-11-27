@@ -30,3 +30,9 @@
 .card{
     margin:10pt;
 }
+
+.footer-element{
+    color: #edeadb;
+    margin: 2.5vh;
+    font-size: 14px;
+}

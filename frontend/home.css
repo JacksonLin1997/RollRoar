@@ -43,7 +43,7 @@
     margin:5px;
 }
 
-.btn-dark{
+.btn .btn-dark{
     font-family : "Microsoft JhengHei";
     font-weight : bold;
     height:30px; 
@@ -70,4 +70,20 @@
 .down-item {
     padding-right: 2%;
     padding-left: 2%;
+}
+
+.footer-element{
+    color: #edeadb;
+    margin: 2.5vh;
+    font-size: 14px;
+}
+
+.upper-nav {
+    margin-right: 0px !important; 
+    margin-left: 0px !important;
+}
+
+.time-font{
+    font-family:"Microsoft JhengHei";
+    font-size: 12px;
 }
