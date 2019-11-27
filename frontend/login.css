@@ -17,6 +17,10 @@ html, body {
   background-color: #d5d1c6;
 }
 
+nav{
+  height: 50pt;
+}
+
 .left {
   display: inline-block;
   width: 7%;
@@ -25,7 +29,9 @@ html, body {
 
 a.navbar-brand.mx-auto h4 {
   display: inline-block;
+  margin: 0px;
 }
+
 
 .logo {
   display: inline-block;
@@ -46,65 +52,64 @@ a.navbar-brand.mx-auto h4 {
   display: flex;
   flex-wrap: wrap;
 }
-
-.container-fluid .row .col-md-5.pic1 {
+.col-md-5.pic1 {
   background-image: url(https://i.imgur.com/DITety2.png);
   background-size: auto 140%;
   background-position: center bottom;
   background-repeat: no-repeat;
 }
-.container-fluid .row .col-md-5.pic1 .textpanel {
+.textpanel {
   margin: 15%;
 }
-.container-fluid .row .col-md-5.pic1 .textpanel h1 {
+.textpanel h1 {
   margin: 2px;
 }
-.container-fluid .row .col-md-5.pic1 .textpanel p {
+.textpanel p {
   font-size: 80%;
   margin: 2px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
-.container-fluid .row .col-md-5.pic2{
+.col-md-5.pic2{
   padding: 1%;
 }
 
-.container-fluid .row .col-md-5.pic2 .login-form {
+.login-form {
   margin: 10%;
   padding-left: 5%;
   padding-right: 5%;
 }
-.container-fluid .row .col-md-5.pic2 .login-form h1 {
+.login-form h1 {
   padding: 5px;
   text-align: center;
 }
-.container-fluid .row .col-md-5.pic2 .login-form .form-group1 {
+.form-group1 {
   margin: 10px;
 }
-.container-fluid .row .col-md-5.pic2 .login-form .form-group2 {
+.form-group2 {
   margin: 10px;
 }
-.container-fluid .row .col-md-5.pic2 .login-form .form-group3 {
+.form-group3 {
   text-align: center;
 }
-.container-fluid .row .col-md-5.pic2 .login-form .clearfix {
+.clearfix {
   margin: 10px;
 }
-.container-fluid .row .col-md-5.pic2 .login-form .clearfix a.pull-right {
+a.pull-right {
   float: right !important;
 }
-.container-fluid .row .col-md-5.pic2 .login-form .sign-other {
-  margin: 10px;
+.sign-other {
+  margin: 12px;
 }
-.container-fluid .row .col-md-5.pic2 .login-form .sign-other p {
+.sign-other p {
   text-align: center;
   border-bottom: solid 3px #777;
 }
-.container-fluid .row .col-md-5.pic2 .login-form .sign-other .signpics {
+.signpics {
   text-align: center;
 }
-.container-fluid .row .col-md-5.pic2 .login-form .sign-other .signpics .fb {
+.fb {
   display: inline-block;
   width: 110px;
   height: 40px;
@@ -113,7 +118,7 @@ a.navbar-brand.mx-auto h4 {
   background-position: center center;
   border-radius: 10px;
 }
-.container-fluid .row .col-md-5.pic2 .login-form .sign-other .signpics .line {
+.line {
   display: inline-block;
   width: 110px;
   height: 40px;
@@ -122,9 +127,9 @@ a.navbar-brand.mx-auto h4 {
   background-position: center center;
   border-radius: 10px;
 }
-.container-fluid .row .col-md-5.pic2 .login-form .newuser {
-  margin: 10px;
+.newuser {
+  margin: 4px;
 }
-.container-fluid .row .col-md-5.pic2 .login-form .newuser a {
+.newuser a {
   display: inline;
 }
