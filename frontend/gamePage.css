@@ -1,13 +1,11 @@
-html, body {
+*{
     margin: 0;
     padding: 0;
-    height: 100%;
-    width: 100%;
-    background-color: #d5d1c6;
+    list-style: none;
 }
 .header{
     display: flex;
-    width: 1440px;
+    width: 1920px;
     height: 68px;
     padding-right: 44px;
     background-color: #333e54;
@@ -76,7 +74,7 @@ html, body {
 }
 
 .subject{
-    width: 1440px;
+    width: 1920px;
     background-image: url('img/vote_bg1.png');
     background-repeat: no-repeat;
     background-position: center;
@@ -105,7 +103,7 @@ html, body {
 }
 
 .voting{
-    width: 1440px;
+    width: 1920px;
     background-image: url('img/vote_bg2.png');
     background-repeat: no-repeat;
     background-color: #ced3d7;
@@ -118,7 +116,7 @@ html, body {
     font-weight: bold;
     font-size: 36px;
     color: #ffffff;
-    padding: 140px 26px 0 138px;
+    padding: 135px 26px 0 365px;
 }
 .voting .main .pool_total{
     width: 224px;
@@ -135,68 +133,6 @@ html, body {
     display: inline-block;
     line-height: 84px;
 }
-.voting .main .question{
-    font-family: 'Noto Sans TC', sans-serif;
-    font-weight: bold;
-    font-size: 28px;
-    color: #edeadb;
-    padding-top: 288px;
-    margin: auto;
-    text-align: center;
-}
-.voting .main .question hr{
-    margin-top: 24px;
-    border: 1px solid #edeadb;
-    width: 90%;
-}
-.voting .main .question .chart{
-    display: flex;
-    padding-top: 150px;
-}
-.voting .main .question .chart .chart1{
-    padding-right: 56px;
-}
-.voting .main .question .chart .chart1 h4{
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    font-size: 36px;
-    color: #53b1bd;
-    padding-bottom: 14px;
-}
-.voting .main .question .chart .chart2 h4{
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    font-size: 36px;
-    color: #f7e591;
-    padding-bottom: 20px;
-}
-.voting .main .question .chart .chart1 h5{
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    font-size: 36px;
-    color: #53b1bd;
-    padding-top: 20px;
-}
-.voting .main .question .chart .chart2 h5{
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    font-size: 36px;
-    color: #f7e591;
-    padding-top: 14px;
-}
-.voting .main .question .vote_button{
-    margin-top: 62px;
-    position: relative;
-}
-.voting .main .question .vote_button .vote_text{
-    position: absolute;
-    top: 45%;
-    left: 53%;
-    transform: translate(-50%, -50%);
-    font-family: 'Roboto', sans-serif;
-    font-size: 24px;
-    color: #ffffff;
-}
 .voting .main .countdown{
     display: flex;
 }
@@ -206,6 +142,7 @@ html, body {
     border-radius: 8px;
     background-color: #edeadb;
     margin-top: 128px;
+    margin-left: 496px;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     font-size: 35px;
@@ -286,7 +223,6 @@ html, body {
     background-color: #edeadb;
     margin-top: 128px;
     margin-left: 4px;
-    margin-right: 130px;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     font-size: 35px;
@@ -295,39 +231,114 @@ html, body {
     display: inline-block;
     line-height: 58px;
 }
+.voting .question{
+    display: flex;
+}
+.voting .question .align_center{
+    margin: auto;
+}
+.voting .question .align_center h3{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: bold;
+    font-size: 28px;
+    color: #edeadb;
+    padding-top: 76px;
+    text-align: center;
+}
+.voting .question .align_center hr{
+    margin-top: 24px;
+    border: 1px solid #edeadb;
+}
+.voting .question .align_center .chart{
+    display: flex;
+    padding-top: 150px;
+    text-align: center;
+}
+.voting .question .align_center .chart .chart1{
+    padding-right: 56px;
+}
+.voting .question .align_center .chart .chart1 h4{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 36px;
+    color: #53b1bd;
+    padding-bottom: 14px;
+}
+.voting .question .align_center .chart .chart2 h4{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 36px;
+    color: #f7e591;
+    padding-bottom: 20px;
+}
+.voting .question .align_center .chart .chart1 h5{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 36px;
+    color: #53b1bd;
+    padding-top: 20px;
+}
+.voting .question .align_center .chart .chart2 h5{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 36px;
+    color: #f7e591;
+    padding-top: 14px;
+}
+.voting .question .align_center .vote_button{
+    margin-top: 62px;
+    display: flex;
+    position: relative;
+}
+.voting .question .align_center .vote_button img{
+    margin: auto;
+}
+.voting .question .align_center .vote_button .vote_text{
+    position: absolute;
+    top: 48%;
+    left: 53%;
+    transform: translate(-50%, -50%);
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    color: #ffffff;
+}
 .voting .comment{
     padding-top: 144px;
+    display: flex;
 }
-.voting .comment h1{
+.voting .comment .section{
+    margin: auto;
+}
+.voting .comment .section h1{
     text-align: center;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     font-size: 28px;
     color: #4f4f4f;
 }
-.voting .comment hr{
-    border: 2px solid #4f4f4f;
+.voting .comment .section hr{
+    border: 3px solid #4f4f4f;
     margin-top: 15px;
-    width: 9%;
+    width: 7%;
 }
-.voting .comment h2{
-    padding: 44px 0 24px 150px;
+.voting .comment .section h2{
+    padding-top: 44px;
+    padding-bottom: 24px;
     font-family: 'Noto Sans TC', sans-serif;
     font-size: 17px;
     color: #4f464f;
 }
-.voting .comment .message{
-    padding-left: 150px;
+.voting .comment .section .message{
     display: flex;
     align-items: center;
     padding-bottom: 144px;
 }
-.voting .comment .message img{
+.voting .comment .section .message img{
     width: 76px;
     height: 76px;
     padding-right: 24px;
 }
-.voting .comment .message input{
+.voting .comment .section .message input{
     width: 964px;
     height: 100px;
     border-radius: 38px;
@@ -341,14 +352,14 @@ html, body {
     background-color: #ffffff;
     transition: 0.5s;
 }
-.voting .comment .message input:focus{
+.voting .comment .section .message input:focus{
     outline: none;
     border: 3px solid #555;
 }
 
 .footer{
     display: flex;
-    width: 1440px;
+    width: 1920px;
     height: 72px;
     padding-left: 68px;
     background-color: #333e54;

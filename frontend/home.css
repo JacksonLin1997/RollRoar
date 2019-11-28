@@ -33,7 +33,7 @@
 }
 
 .card{
-    margin:10pt;
+    margin:2%;
 }
 
 .btn-outline-dark{
@@ -43,7 +43,7 @@
     margin:5px;
 }
 
-.btn-dark{
+.btn .btn-dark{
     font-family : "Microsoft JhengHei";
     font-weight : bold;
     height:30px; 
@@ -51,5 +51,39 @@
 }
 
 .btn-light{
-    box-shadow:3pt;
+    box-shadow:3pt !important;
+}
+
+
+.dark-arrow-right{
+    background-image: url("img/right-arrow.png")!important ;
+
+}
+.dark-arrow-left{
+    background-image: url("img/left-arrow.png")!important ;
+
+}
+
+.down-control {
+    width: 2% !important ;
+}
+.down-item {
+    padding-right: 2%;
+    padding-left: 2%;
+}
+
+.footer-element{
+    color: #edeadb;
+    margin: 2.5vh;
+    font-size: 14px;
+}
+
+.upper-nav {
+    margin-right: 0px !important; 
+    margin-left: 0px !important;
+}
+
+.time-font{
+    font-family:"Microsoft JhengHei";
+    font-size: 12px;
 }

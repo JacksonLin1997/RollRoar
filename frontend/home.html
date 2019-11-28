@@ -18,29 +18,29 @@
     <body class="background text-type">
         <!-- <div class="container"> -->
             <div class="banner">
-                <div class="row" style="align-items: center;">
-                    <div class="col-sm-1">
+                <div class="row upper-nav" style="align-items: center;">
+                    <div class="col-sm-1.8">
                         <div class="dropdown">
-                            <a class="dropdown-toggle dropbtn" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size: 10pt;">Language</a>
+                            <a class="dropdown-toggle dropbtn" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #edeadb; border-right-style:solid; padding-right:10px; border-width:0.05px; border-right-color: #edeadb;">Language</a>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                 <a class="dropdown-item" href="#">English</a>
                                 <a class="dropdown-item" href="#">繁體中文</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-3">
-                        <i class="fas fa-search" style="color: whitesmoke;"></i>
-                        <input type="text" style="color:whitesmoke; border-radius:10pt; border-block-color: white; background-color: transparent;"> 
+                    <div class="col-sm-2.2">
+                        <i class="fas fa-search" style="color:#edeadb;padding-left: 15px; padding-right:5px;"></i>
+                        <input type="text" style="color:#edeadb; border-radius:10pt; border-block-color: #edeadb; background-color: transparent;"> 
                     </div>
-                    <div class="col-sm-4" >
-                            <p style="color:#ffffff;text-align: center; font-size: 16pt;"><img src="img/logo.png" style="margin-top: 5pt;">說說</p>
+                    <div class="col-sm-4" style="text-align: center; font-size:24px;">
+                        <a href="#" style="color:#edeadb;"><img src="img/" alt=""> 說說 </a>
                     </div>
                     <div class="col-sm-4">
                         <div style="float: right;">
                             <img src="img/coin.png">
-                            <span class="badge badge-pill badge-light" >$10000</span>
-                            <img src="img/bell.png">
-                            <img src="img/user.png" class="dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <button type="button" class="btn btn-outline-light" style="border-radius: 20pt;">$10000</button>
+                            <a href="#"></a><img src="img/vote_noti.png" style="padding: 12px; height:300%;"></a>
+                            <img src="img/vote_user.png" class="dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="padding: 12px; height:300%;">
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                 <a class="dropdown-item" href="user_activity.html">活動紀錄</a>
                                 <a class="dropdown-item" href="user_collection.html">我的收藏</a>
@@ -88,7 +88,7 @@
                             </div>
                         </div>
                     </div>
-                    <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+                    <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev" style="color: black;">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="sr-only">Previous</span>
                     </a>
@@ -105,7 +105,7 @@
                 <!-- 多圖輪播 -->
                 <div id="carousel_2" class="carousel slide" data-ride="carousel_2">
                     <div class="carousel-inner" >
-                        <div class="carousel-item active">
+                        <div class="carousel-item down-item active">
                             <div class="row">
                                 <div class="col-md-4">                               
                                     <article class="card">
@@ -113,7 +113,9 @@
                                         <div class="card-body ">
                                             <h5 class="card-title">中華隊加油</h5>
                                             <p class="card-text">中韓大戰誰會贏RRRRRR</p>
-                                            <i class="far fa-clock" style="font-size: 9pt; margin-right: 8pt"> 2019.11.10-2019.11.12</i>
+                                            <div class="time-font">
+                                                <img src="img/main_time.png" alt="">&nbsp2019.11.10-2019.12.25
+                                            </div>
                                             <button type="button" class="btn btn-light" style="border-radius: 20px;"><img src="img/coin.png"> 1,500</button>
                                         </div>
                                     </article>
@@ -124,7 +126,9 @@
                                         <div class="card-body">
                                             <h5 class="card-title">砸學校</h5>
                                             <p class="card-text">你好我好大家好</p>
-                                            <i class="far fa-clock" style="font-size: 9pt; margin-right: 8pt"> 2019.11.10-2019.12.25</i>
+                                            <div class="time-font">
+                                                <img src="img/main_time.png" alt="">&nbsp2019.11.10-2019.12.25
+                                            </div>
                                             <button type="button" class="btn btn-light" style="border-radius: 20px;"><img src="img/coin.png"> 3,500</button>
                                         </div>
                                     </article>
@@ -135,14 +139,16 @@
                                         <div class="card-body ">
                                             <h5 class="card-title">光年之外</h5>
                                             <p class="card-text">你今天登陸月球了嗎?</p>
-                                            <i class="far fa-clock" style="font-size: 9pt; margin-right: 8pt"> 2019.11.11-2020.11.11</i>
+                                            <div class="time-font">
+                                                <img src="img/main_time.png" alt="">&nbsp2019.11.10-2019.12.25
+                                            </div>
                                             <button type="button" class="btn btn-light" style="border-radius: 20px; "><img src="img/coin.png"> 500</button>
                                         </div>
                                     </article>
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-item">
+                        <div class="carousel-item down-item">
                             <div class="row">
                                 <div class="col-md-4">                               
                                         <article class="card">
@@ -150,7 +156,9 @@
                                             <div class="card-body">
                                                 <h5 class="card-title">中華隊加油</h5>
                                                 <p class="card-text">中韓大戰誰會贏RRRRRR</p>
-                                                <i class="far fa-clock" style="font-size: 9pt; margin-right: 8pt"> 2019.11.10-2019.11.12</i>
+                                                <div class="time-font">
+                                                    <img src="img/main_time.png" alt="">&nbsp2019.11.10-2019.12.25
+                                                </div>
                                                 <button type="button" class="btn btn-light" style="border-radius: 20px;"><img src="img/coin.png"> 1,500</button>
                                             </div>
                                         </article>
@@ -161,7 +169,9 @@
                                             <div class="card-body">
                                                 <h5 class="card-title">砸學校</h5>
                                                 <p class="card-text">你好我好大家好</p>
-                                                <i class="far fa-clock" style="font-size: 9pt; margin-right: 8pt"> 2019.11.10-2019.12.25</i>
+                                                <div class="time-font">
+                                                    <img src="img/main_time.png" alt="">&nbsp2019.11.10-2019.12.25
+                                                </div>
                                                 <button type="button" class="btn btn-light" style="border-radius: 20px;"><img src="img/coin.png"> 3,500</button>
                                             </div>
                                         </article>
@@ -172,14 +182,16 @@
                                             <div class="card-body">
                                                 <h5 class="card-title">光年之外</h5>
                                                 <p class="card-text">你今天登陸月球了嗎?</p>
-                                                <i class="far fa-clock" style="font-size: 9pt; margin-right: 8pt"> 2019.11.11-2020.11.11</i>
+                                                <div class="time-font">
+                                                    <img src="img/main_time.png" alt="">&nbsp2019.11.10-2019.12.25
+                                                </div>
                                                 <button type="button" class="btn btn-light" style="border-radius: 20px;"><img src="img/coin.png"> 500</button>
                                             </div>
                                         </article>
                                     </div>
                             </div>
                         </div>
-                        <div class="carousel-item">
+                        <div class="carousel-item down-item">
                             <div class="row">
                                 <div class="col-md-4">                               
                                     <article class="card">
@@ -187,7 +199,9 @@
                                         <div class="card-body ">
                                             <h5 class="card-title">中華隊加油</h5>
                                             <p class="card-text">中韓大戰誰會贏RRRRRR</p>
-                                            <i class="far fa-clock" style="font-size: 9pt; margin-right: 8pt"> 2019.11.10-2019.11.12</i>
+                                            <div class="time-font">
+                                                <img src="img/main_time.png" alt="">&nbsp2019.11.10-2019.12.25
+                                            </div>
                                             <button type="button" class="btn btn-light" style="border-radius: 20px;"><img src="img/coin.png"> 1,500</button>
                                         </div>
                                     </article>
@@ -198,7 +212,9 @@
                                         <div class="card-body">
                                             <h5 class="card-title">砸學校</h5>
                                             <p class="card-text">你好我好大家好</p>
-                                            <i class="far fa-clock" style="font-size: 9pt; margin-right: 8pt"> 2019.11.10-2019.12.25</i>
+                                            <div class="time-font">
+                                                <img src="img/main_time.png" alt="">&nbsp2019.11.10-2019.12.25
+                                            </div>
                                             <button type="button" class="btn btn-light" style="border-radius: 20px;"><img src="img/coin.png"> 3,500</button>
                                         </div>
                                     </article>
@@ -209,14 +225,16 @@
                                         <div class="card-body">
                                             <h5 class="card-title">光年之外</h5>
                                             <p class="card-text">你今天登陸月球了嗎?</p>
-                                            <i class="far fa-clock" style="font-size: 9pt; margin-right: 8pt"> 2019.11.11-2020.11.11</i>
+                                            <div class="time-font">
+                                                <img src="img/main_time.png" alt="">&nbsp2019.11.10-2019.12.25
+                                            </div>
                                             <button type="button" class="btn btn-light" style="border-radius: 20px;"><img src="img/coin.png"> 500</button>
                                         </div>
                                     </article>
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-item">
+                        <div class="carousel-item down-item">
                             <div class="row">
                                 <div class="col-md-4">                               
                                     <article class="card">
@@ -224,7 +242,9 @@
                                         <div class="card-body">
                                             <h5 class="card-title">中華隊加油</h5>
                                             <p class="card-text">中韓大戰誰會贏RRRRRR</p>
-                                            <i class="far fa-clock" style="font-size: 9pt; margin-right: 8pt"> 2019.11.10-2019.11.12</i>
+                                            <div class="time-font">
+                                                <img src="img/main_time.png" alt="">&nbsp2019.11.10-2019.12.25
+                                            </div>
                                             <button type="button" class="btn btn-light" style="border-radius: 20px;"><img src="img/coin.png"> 1,500</button>
                                         </div>
                                     </article>
@@ -235,7 +255,9 @@
                                         <div class="card-body">
                                             <h5 class="card-title">砸學校</h5>
                                             <p class="card-text">你好我好大家好</p>
-                                            <i class="far fa-clock" style="font-size: 9pt; margin-right: 8pt"> 2019.11.10-2019.12.25</i>
+                                            <div class="time-font">
+                                                <img src="img/main_time.png" alt="">&nbsp2019.11.10-2019.12.25
+                                            </div>
                                             <button type="button" class="btn btn-light" style="border-radius: 20px;"><img src="img/coin.png"> 3,500</button>
                                         </div>
                                     </article>
@@ -246,19 +268,21 @@
                                         <div class="card-body">
                                             <h5 class="card-title">光年之外</h5>
                                             <p class="card-text">你今天登陸月球了嗎?</p>
-                                            <i class="far fa-clock" style="font-size: 9pt; margin-right: 8pt"> 2019.11.11-2020.11.11</i>
+                                            <div class="time-font">
+                                                <img src="img/main_time.png" alt="">&nbsp2019.11.10-2019.12.25
+                                            </div>
                                             <button type="button" class="btn btn-light" style="border-radius: 20px;"><img src="img/coin.png"> 500</button>
                                         </div>
                                     </article>
                                 </div>
                             </div>
                         </div>
-                        <a class="carousel-control-prev" href="#carousel_2" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <a class="carousel-control-prev down-control" href="#carousel_2" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon dark-arrow-left" aria-hidden="true"></span>
                             <span class="sr-only">Previous</span>
                         </a>
-                        <a class="carousel-control-next" href="#carousel_2" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <a class="carousel-control-next down-control" href="#carousel_2" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon dark-arrow-right" aria-hidden="true"></span>
                             <span class="sr-only">Next</span>
                         </a>   
                     </div>
@@ -268,7 +292,7 @@
                 <!-- 多圖輪播 -->
                 <div id="carousel_3" class="carousel slide" data-ride="carousel_3">
                     <div class="carousel-inner" >
-                        <div class="carousel-item active">
+                        <div class="carousel-item down-item active">
                             <div class="row">
                                 <div class="col-md-4">                               
                                     <article class="card">
@@ -276,7 +300,9 @@
                                         <div class="card-body ">
                                             <h5 class="card-title">文字標題</h5>
                                             <p class="card-text">文字內容</p>
-                                            <i class="far fa-clock" style="font-size: 9pt; margin-right: 8pt"> 2019.11.10-2019.11.12</i>
+                                            <div class="time-font">
+                                                <img src="img/main_time.png" alt="">&nbsp2019.11.10-2019.12.25
+                                            </div>
                                             <button type="button" class="btn btn-light" style="border-radius: 20px;"><img src="img/coin.png"> 1,500</button>
                                         </div>
                                     </article>
@@ -287,7 +313,9 @@
                                         <div class="card-body">
                                             <h5 class="card-title">文字標題</h5>
                                             <p class="card-text">文字內容</p>
-                                            <i class="far fa-clock" style="font-size: 9pt; margin-right: 8pt"> 2019.11.10-2019.12.25</i>
+                                            <div class="time-font">
+                                                <img src="img/main_time.png" alt="">&nbsp2019.11.10-2019.12.25
+                                            </div>
                                             <button type="button" class="btn btn-light" style="border-radius: 20px;"><img src="img/coin.png"> 3,500</button>
                                         </div>
                                     </article>
@@ -298,14 +326,16 @@
                                         <div class="card-body">
                                             <h5 class="card-title">文字標題</h5>
                                             <p class="card-text">文字內容</p>
-                                            <i class="far fa-clock" style="font-size: 9pt; margin-right: 8pt"> 2019.11.11-2020.11.11</i>
+                                            <div class="time-font">
+                                                <img src="img/main_time.png" alt="">&nbsp2019.11.10-2019.12.25
+                                            </div>
                                             <button type="button" class="btn btn-light" style="border-radius: 20px;"><img src="img/coin.png"> 500</button>
                                         </div>
                                     </article>
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-item">
+                        <div class="carousel-item down-item">
                             <div class="row">
                                 <div class="col-md-4">                               
                                         <article class="card">
@@ -313,7 +343,9 @@
                                             <div class="card-body">
                                                 <h5 class="card-title">文字標題</h5>
                                                 <p class="card-text">文字內容</p>
-                                                <i class="far fa-clock" style="font-size: 9pt; margin-right: 8pt"> 2019.11.10-2019.11.12</i>
+                                                <div class="time-font">
+                                                    <img src="img/main_time.png" alt="">&nbsp2019.11.10-2019.12.25
+                                                </div>
                                                 <button type="button" class="btn btn-light" style="border-radius: 20px;"><img src="img/coin.png"> 1,500</button>
                                             </div>
                                         </article>
@@ -324,7 +356,9 @@
                                             <div class="card-body">
                                                 <h5 class="card-title">文字標題</h5>
                                                 <p class="card-text">文字內容</p>
-                                                <i class="far fa-clock" style="font-size: 9pt; margin-right: 8pt"> 2019.11.10-2019.12.25</i>
+                                                <div class="time-font">
+                                                    <img src="img/main_time.png" alt="">&nbsp2019.11.10-2019.12.25
+                                                </div>
                                                 <button type="button" class="btn btn-light" style="border-radius: 20px;"><img src="img/coin.png"> 3,500</button>
                                             </div>
                                         </article>
@@ -335,14 +369,16 @@
                                             <div class="card-body">
                                                 <h5 class="card-title">文字標題</h5>
                                                 <p class="card-text">文字內容</p>
-                                                <i class="far fa-clock" style="font-size: 9pt; margin-right: 8pt"> 2019.11.11-2020.11.11</i>
+                                                <div class="time-font">
+                                                    <img src="img/main_time.png" alt="">&nbsp2019.11.10-2019.12.25
+                                                </div>
                                                 <button type="button" class="btn btn-light" style="border-radius: 20px;"><img src="img/coin.png"> 500</button>
                                             </div>
                                         </article>
                                     </div>
                             </div>
                         </div>
-                        <div class="carousel-item">
+                        <div class="carousel-item down-item">
                             <div class="row">
                                 <div class="col-md-4">                               
                                     <article class="card">
@@ -350,7 +386,9 @@
                                         <div class="card-body">
                                             <h5 class="card-title">文字標題</h5>
                                             <p class="card-text">文字內容</p>
-                                            <i class="far fa-clock" style="font-size: 9pt; margin-right: 8pt"> 2019.11.10-2019.11.12</i>
+                                            <div class="time-font">
+                                                <img src="img/main_time.png" alt="">&nbsp2019.11.10-2019.12.25
+                                            </div>
                                             <button type="button" class="btn btn-light" style="border-radius: 20px;"><img src="img/coin.png"> 1,500</button>
                                         </div>
                                     </article>
@@ -361,7 +399,9 @@
                                         <div class="card-body">
                                             <h5 class="card-title">文字標題</h5>
                                             <p class="card-text">文字內容</p>
-                                            <i class="far fa-clock" style="font-size: 9pt; margin-right: 8pt"> 2019.11.10-2019.12.25</i>
+                                            <div class="time-font">
+                                                <img src="img/main_time.png" alt="">&nbsp2019.11.10-2019.12.25
+                                            </div>
                                             <button type="button" class="btn btn-light" style="border-radius: 20px;"><img src="img/coin.png"> 3,500</button>
                                         </div>
                                     </article>
@@ -372,14 +412,16 @@
                                         <div class="card-body">
                                             <h5 class="card-title">文字標題</h5>
                                             <p class="card-text">文字內容</p>
-                                            <i class="far fa-clock" style="font-size: 9pt; margin-right: 8pt"> 2019.11.11-2020.11.11</i>
+                                            <div class="time-font">
+                                                <img src="img/main_time.png" alt="">&nbsp2019.11.10-2019.12.25
+                                            </div>
                                             <button type="button" class="btn btn-light" style="border-radius: 20px;"><img src="img/coin.png"> 500</button>
                                         </div>
                                     </article>
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-item">
+                        <div class="carousel-item down-item">
                             <div class="row">
                                 <div class="col-md-4">                               
                                     <article class="card">
@@ -387,7 +429,9 @@
                                         <div class="card-body">
                                             <h5 class="card-title">文字標題</h5>
                                             <p class="card-text">文字內容</p>
-                                            <i class="far fa-clock" style="font-size: 9pt; margin-right: 8pt"> 2019.11.10-2019.11.12</i>
+                                            <div class="time-font">
+                                                <img src="img/main_time.png" alt="">&nbsp2019.11.10-2019.12.25
+                                            </div>
                                             <button type="button" class="btn btn-light" style="border-radius: 20px;"><img src="img/coin.png"> 1,500</button>
                                         </div>
                                     </article>
@@ -398,7 +442,9 @@
                                         <div class="card-body">
                                             <h5 class="card-title">文字標題</h5>
                                             <p class="card-text">文字內容</p>
-                                            <i class="far fa-clock" style="font-size: 9pt; margin-right: 8pt"> 2019.11.10-2019.12.25</i>
+                                            <div class="time-font">
+                                                <img src="img/main_time.png" alt="">&nbsp2019.11.10-2019.12.25
+                                            </div>
                                             <button type="button" class="btn btn-light" style="border-radius: 20px;"><img src="img/coin.png"> 3,500</button>
                                         </div>
                                     </article>
@@ -409,19 +455,21 @@
                                         <div class="card-body">
                                             <h5 class="card-title">文字標題</h5>
                                             <p class="card-text">文字內容</p>
-                                            <i class="far fa-clock" style="font-size: 9pt; margin-right: 8pt"> 2019.11.11-2020.11.11</i>
+                                            <div class="time-font">
+                                                <img src="img/main_time.png" alt="">&nbsp2019.11.10-2019.12.25
+                                            </div>
                                             <button type="button" class="btn btn-light" style="border-radius: 20px;"><img src="img/coin.png"> 500</button>
                                         </div>
                                     </article>
                                 </div>
                             </div>
                         </div>
-                        <a class="carousel-control-prev" href="#carousel_3" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <a class="carousel-control-prev down-control" href="#carousel_3" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon dark-arrow-left" aria-hidden="true"></span>
                             <span class="sr-only">Previous</span>
                         </a>
-                        <a class="carousel-control-next" href="#carousel_3" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <a class="carousel-control-next down-control" href="#carousel_3" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon dark-arrow-right" aria-hidden="true"></span>
                             <span class="sr-only">Next</span>
                         </a>   
                     </div>
@@ -448,7 +496,9 @@
                             <div class="card-body ">
                                 <h5 class="card-title">文字標題</h5>
                                 <p class="card-text">文字內容</p>
-                                <i class="far fa-clock" style="font-size: 9pt; margin-right: 8pt"> 2019.11.10-2019.11.12</i>
+                                <div class="time-font">
+                                    <img src="img/main_time.png" alt="">&nbsp2019.11.10-2019.12.25
+                                </div>
                                 <button type="button" class="btn btn-light" style="border-radius: 20px;"><img src="img/coin.png"> 1,500</button>
                             </div>
                         </article>
@@ -459,7 +509,9 @@
                             <div class="card-body">
                                 <h5 class="card-title">文字標題</h5>
                                 <p class="card-text">文字內容</p>
-                                <i class="far fa-clock" style="font-size: 9pt; margin-right: 8pt"> 2019.11.10-2019.12.25</i>
+                                <div class="time-font">
+                                    <img src="img/main_time.png" alt="">&nbsp2019.11.10-2019.12.25
+                                </div>
                                 <button type="button" class="btn btn-light" style="border-radius: 20px;"><img src="img/coin.png"> 3,500</button>
                             </div>
                         </article>
@@ -470,7 +522,9 @@
                             <div class="card-body">
                                 <h5 class="card-title">文字標題</h5>
                                 <p class="card-text">文字內容</p>
-                                <i class="far fa-clock" style="font-size: 9pt; margin-right: 8pt"> 2019.11.11-2020.11.11</i>
+                                <div class="time-font">
+                                    <img src="img/main_time.png" alt="">&nbsp2019.11.10-2019.12.25
+                                </div>
                                 <button type="button" class="btn btn-light" style="border-radius: 20px;"><img src="img/coin.png"> 500</button>
                             </div>
                         </article>
@@ -481,7 +535,9 @@
                             <div class="card-body">
                                 <h5 class="card-title">文字標題</h5>
                                 <p class="card-text">文字內容</p>
-                                <i class="far fa-clock" style="font-size: 9pt; margin-right: 8pt"> 2019.11.10-2019.11.12</i>
+                                <div class="time-font">
+                                    <img src="img/main_time.png" alt="">&nbsp2019.11.10-2019.12.25
+                                </div>
                                 <button type="button" class="btn btn-light" style="border-radius: 20px;"><img src="img/coin.png"> 1,500</button>
                             </div>
                         </article>
@@ -492,7 +548,9 @@
                             <div class="card-body">
                                 <h5 class="card-title">文字標題</h5>
                                 <p class="card-text">文字內容</p>
-                                <i class="far fa-clock" style="font-size: 9pt; margin-right: 8pt"> 2019.11.10-2019.12.25</i>
+                                <div class="time-font">
+                                    <img src="img/main_time.png" alt="">&nbsp2019.11.10-2019.12.25
+                                </div>
                                 <button type="button" class="btn btn-light" style="border-radius: 20px;"><img src="img/coin.png"> 3,500</button>
                             </div>
                         </article>
@@ -503,7 +561,9 @@
                             <div class="card-body">
                                 <h5 class="card-title">文字標題</h5>
                                 <p class="card-text">文字內容</p>
-                                <i class="far fa-clock" style="font-size: 9pt; margin-right: 8pt"> 2019.11.11-2020.11.11</i>
+                                <div class="time-font">
+                                    <img src="img/main_time.png" alt="">&nbsp2019.11.10-2019.12.25
+                                </div>
                                 <button type="button" class="btn btn-light" style="border-radius: 20px;"><img src="img/coin.png"> 500</button>
                             </div>
                         </article>
@@ -516,23 +576,27 @@
         <div class="banner">
             <div class="row">
                 <div class="col-sm-6">
-                    <p style="color: whitesmoke; margin: 2.5vh;"><i class="far fa-copyright"></i>  2019 CHJB App Name</p>
+                    <p class="footer-element">&copy; 2019 CHJB App Name</p>
                 </div>
-                <div class="col-sm-1"></div>
-                <div class="col-sm-1.5">
-                    <p style="color: whitesmoke; margin: 2.5vh;">
-                        <i class="fas fa-grip-lines-vertical"></i>  Contact Us
-                    </p>
-                </div>
-                <div class="col-sm-2.5">
-                    <p style="color: whitesmoke; margin: 2.5vh;">
-                        <i class="far fa-envelope"></i>  talktalk@gmail.com
-                    </p>
-                </div>
-                <div class="col-sm-1.5">
-                    <p style="color: whitesmoke; margin: 2.5vh;">
-                        <i class="fab fa-facebook-square"></i>  說說  talktalk
-                    </p>
+                <div class="col-sm-6">
+                    <div class="row">
+                        <div class="col-sm-1"></div>
+                        <div class="col-sm-1.5">
+                            <p class="footer-element">
+                                | &emsp; Contact Us
+                            </p>
+                        </div>
+                        <div class="col-sm-2.5">
+                            <p class="footer-element">
+                                <img src="img/vote_email.png" alt="">  talktalk@gmail.com
+                            </p>
+                        </div>
+                        <div class="col-sm-1.5">
+                            <p class="footer-element">
+                                <img src="img/vote_fb.png" alt="">  說說  talktalk
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

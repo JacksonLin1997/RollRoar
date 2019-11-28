@@ -59,3 +59,8 @@ a.navbar-brand.mx-auto h4 {
 i .far.fa-clock{
     font-family: 微軟正黑體;
 }
+.footer-element{
+    color: #edeadb;
+    margin: 2.5vh;
+    font-size: 14px;
+}
