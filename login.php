@@ -40,15 +40,29 @@
     <div class="col-md-5 pic2">
       <div class="login-form">
         <h1>Log in</h1>
-        <form>
+        <form action="includes/login.inc.php" method="post">
           <div class="form-group1">
-            <input class="form-control" type="text" placeholder="Username OR Email" required="required"/>
+            <input class="form-control" name="mailuid" type="text" placeholder="Username OR Email" required="required"/>
+            <?php
+                if (isset($_GET['error'])){
+                    if ($_GET['error'] == "nouser"){
+                        echo '<div class="alert">*該使用者名稱不存在</div>';
+                    }
+                }
+            ?> 
           </div>
           <div class="form-group2">
-            <input class="form-control" type="password" placeholder="Password" required="required"/>
+            <input class="form-control" name="pwd" type="password" placeholder="Password" required="required"/>
+            <?php
+                if (isset($_GET['error'])){
+                    if ($_GET['error'] == "wrongpwd"){
+                        echo '<div class="alert">*密碼輸入錯誤</div>';
+                    }
+                }
+            ?> 
           </div>
           <div class="form-group3">
-            <button class="btn btn-primary" type="submit">登入</button>
+            <button class="btn btn-primary" name="login-submit" type="submit">登入</button>
           </div>
           <div class="clearfix">
             <label class="pull-left checkbox-inline"></label>
@@ -61,7 +75,7 @@
               <div class="line"></div>
             </div>
           </div>
-          <div class="newuser">I'm a new user. <a href="">Sign up.</a></div>
+          <div class="newuser">I'm a new user. <a href="register.php">Sign up.</a></div>
         </form>
       </div>
     </div>
