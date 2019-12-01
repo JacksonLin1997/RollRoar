@@ -6,29 +6,87 @@
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-weight: bold;
 }
+/* 
 .banner{
     background-color: rgb(51,62,84);
     width: 100%;
-    /* vh螢幕可視範圍高度的百分比 */
-}
+    vh螢幕可視範圍高度的百分比
+} */
 /* nav{
     height: 50pt;
 } */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #edeadc; 
+    background-image: url(img/collect_bg.png); 
+    background-size: 100%;
+    background-attachment: fixed;
+} 
+input{
+    outline:none;
+    padding-left: 10px;
+    color:#edeadb; 
+    border-radius:10pt; 
+    background-color: transparent;
+    border-color: #edeadb;
+    border-style: solid;
+}
+nav{
+    background-color: #333e54;
+    min-height: 70px;
+}
+.navbar-brand {
+    transform: translateX(-50%);
+    left: 50%;
+    position: absolute;
+    top: 15px;
+}
+
+.navleft{
+    display: flex;
+    justify-content: flex-start;
+    flex-grow: 1;
+}
+.search{
+    padding: 12px;
+    border-left-style:solid; 
+    border-width:0.05px; 
+    border-left-color: #707070;
+}
+/* #navsearch{
+    margin: 12px;
+    border-left-style:solid; 
+    border-width:0.05px; 
+    border-left-color: #edeadb;
+} */
+.navright{
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
 .dropbtn {
-    color: white;
+    color: #edeadb;
     padding: 1.5vh;
     font-size: 16px;
+    background-color: rgb(51,62,84);
     float:left;
-  }
+    /* border-right-style:solid; 
+    padding-right:10px;
+    border-width:0.05px; 
+    border-right-color: #edeadb; */
+    /* z-index: 1; */
+}
+.dropbtn:hover, .dropbtn:focus {
+    color: #edeadb;
+}
 
 a.navbar-brand.mx-auto h4 {
     display: inline-block;
-    font-weight: bold;
-    margin: 0px;
+    /* font-weight: bold;
+    margin: 0px; */
 }
-
-
-
 .logo {
     display: inline-block;
     width: 20px;
@@ -36,31 +94,68 @@ a.navbar-brand.mx-auto h4 {
     background-color: #fff;
 }
 
+.money{
+    border-radius: 20pt;
+    background-color: #212834;
+    border-color:  #edeadb;
+    color: #edeadb;
+}
+.btn{  
+    width: 80pt;
+    outline: none;
+}
+.btn:disabled{
+    opacity: 1;
+}
 
-.background {
+.card-money{
+    border-radius: 15pt;
+    box-shadow:0px 4px rgba(20%,20%,40%,0.5);
+    font-size: 11pt;
+    width: 95px;
+    height: 35px;
+}
+
+
+/* .background {
     background-color: #edeadc;
-    /* background-image:url(img/collect_bg.png);
-    background-size: cover; */
+
     width: 100%;
-    /* height: auto; */
+
     display: table;
     background-size: cover;
+} */
+.col-10{
+    flex: 0 0 100%;
+    max-width: 100%;
 }
-
-.text-type{
-    /* font-size : 14pt; */
-    font-family: "微軟正黑體";
+.card-deck{
+    margin: 0pt; 
+    margin-bottom: 25pt;
 }
-
 .card{
-    margin:10pt;
+    margin: 12pt;
 }
-
-i .far.fa-clock{
-    font-family: 微軟正黑體;
+#win{
+    padding-left: 1px;
+    background-color: #f5d1d1;
+    border-color: transparent;
+    color: #1f1f1f;
+}
+#lose{
+    padding-left: 1px;
+    background-color: #d1e5f5;
+    border-color: transparent;
+    color: #1f1f1f;
+}
+footer{
+    background-color: #333e54;
+    margin-top: 10%;
+    display: flex;
 }
 .footer-element{
     color: #edeadb;
     margin: 2.5vh;
     font-size: 14px;
+
 }
