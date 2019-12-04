@@ -107,6 +107,7 @@
     background-image: url('img/vote_bg2.png');
     background-repeat: no-repeat;
     background-color: #ced3d7;
+    position: relative;
 }
 .voting .main{
     display: flex;
@@ -264,13 +265,6 @@
     color: #53b1bd;
     padding-bottom: 14px;
 }
-.voting .question .align_center .chart .chart2 h4{
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    font-size: 36px;
-    color: #f7e591;
-    padding-bottom: 20px;
-}
 .voting .question .align_center .chart .chart1 h5{
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
@@ -278,17 +272,25 @@
     color: #53b1bd;
     padding-top: 20px;
 }
+.voting .question .align_center .chart .chart2 h4{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 36px;
+    color: #f7e591;
+    padding-bottom: 14px;
+}
 .voting .question .align_center .chart .chart2 h5{
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     font-size: 36px;
     color: #f7e591;
-    padding-top: 14px;
+    padding-top: 20px;
 }
 .voting .question .align_center .vote_button{
     margin-top: 62px;
     display: flex;
     position: relative;
+    cursor: pointer;
 }
 .voting .question .align_center .vote_button img{
     margin: auto;
@@ -300,6 +302,126 @@
     transform: translate(-50%, -50%);
     font-family: 'Roboto', sans-serif;
     font-size: 24px;
+    color: #ffffff;
+}
+.voting .question .align_center .modal{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    padding-top: 350px;
+    box-sizing: border-box;
+    left: 0;
+    top: 0;
+    width: 1920px;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+.voting .question .align_center .modal .modal-content{
+    box-sizing: border-box;
+    background-color: #333b4b;
+    margin: auto;
+    padding: 20px;
+    border: 20px solid #edeadc;
+    border-radius: 10px;
+    width: 845px;
+    height: 592px;
+}
+.voting .question .align_center .modal .modal-content .close{
+    color: #edeadc;
+    float: right;
+    font-size: 51px;
+    line-height: 25px;
+    font-weight: bold;
+}
+.voting .question .align_center .modal .modal-content .close:hover{
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+.voting .question .align_center .modal .modal-content input{
+    display: block;
+    margin: auto;
+    width: 512px;
+    height: 72px;
+    box-sizing: border-box;
+    border: 0px;
+    font-size: 24px;
+    color: #4c4c4c;
+    margin-top: 80px;
+    padding-left: 80px;
+    border-radius: 40px;
+    background-color: #fff;
+    background-image: url(img/popup_window/window_coin.png);
+    background-position: 16px;
+    background-repeat: no-repeat;
+}
+.voting .question .align_center .modal .modal-content .coin{
+    margin-top: 50px;
+    margin-left: 40px;
+}
+.voting .question .align_center .modal .modal-content .coin img{
+    margin: 0 6px;
+    cursor: pointer;
+    transition-duration: 0.1s;
+}
+.voting .question .align_center .modal .modal-content .coin img:hover{
+    opacity: 0.5;
+}
+.voting .question .align_center .modal .modal-content .coin img:active{
+    transform: translateY(5px);
+}
+.voting .question .align_center .modal .modal-content p{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 21px;
+    color: #ff7979;
+    text-align: center;
+    padding-top: 20px;
+}
+.voting .question .align_center .modal .modal-content .v_button{
+    margin-top: 40px;
+    margin-left: 160px;
+    display: flex;
+}
+.voting .question .align_center .modal .modal-content .v_button .win_but1{
+    position: relative;
+    cursor: pointer;
+    margin-right: 56px;
+    transition-duration: 0.1s;
+}
+.voting .question .align_center .modal .modal-content .v_button .win_but1:hover{
+    opacity: 0.5;
+}
+.voting .question .align_center .modal .modal-content .v_button .win_but1:active{
+    transform: translateY(10px);
+}
+.voting .question .align_center .modal .modal-content .v_button .win_but1 .but1_text{
+    position: absolute;
+    top: 44%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 36px;
+    color: #ffffff;
+}
+.voting .question .align_center .modal .modal-content .v_button .win_but2{
+    position: relative;
+    cursor: pointer;
+    transition-duration: 0.1s;
+}
+.voting .question .align_center .modal .modal-content .v_button .win_but2:hover{
+    opacity: 0.5;
+}
+.voting .question .align_center .modal .modal-content .v_button .win_but2:active{
+    transform: translateY(10px);
+}
+.voting .question .align_center .modal .modal-content .v_button .win_but2 .but2_text{
+    position: absolute;
+    top: 44%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 36px;
     color: #ffffff;
 }
 .voting .comment{
