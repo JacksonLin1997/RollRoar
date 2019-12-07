@@ -28,10 +28,6 @@
     font-family : "Microsoft JhengHei";
 }
 
-.top_pic{
-    /* height: 70vh; */
-}
-
 .card{
     margin:2%;
 }
@@ -86,4 +82,67 @@
 .time-font{
     font-family:"Microsoft JhengHei";
     font-size: 12px;
+}
+
+.gallery-upload {
+    width: 100%;
+    padding: 20px 0;
+    margin-top: 20px;
+    background-color: #F2F2F2;
+}
+
+.gallery-upload h2 {
+    font-family: Catamaran;
+    font-size: 28px;
+    font-weight: 600;
+    color: #111;
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.gallery-upload form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.gallery-upload form input {
+    width: 400px;
+    height: 30px;
+    margin-top: 10px;
+    padding: 0 15px;
+    border-radius: 100px;
+    box-shadow: none;
+    border: 1px solid #ccc;
+}
+
+.gallery-upload form .bigger_field {
+    width: 500px;
+    height: 200px;
+    margin-top: 10px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    box-shadow: none;
+    border: 1px solid #ccc;
+}
+
+.gallery-upload form input[type=file] {
+    padding-top: 8px !important;
+    background-color: #fefefe;
+    width: 250px;
+    height: 48px;
+}
+
+.gallery-upload form button {
+    width: 120px;
+    height: 30px;
+    margin-top: 10px;
+    border-radius: 100px;
+    box-shadow: none;
+    border: none;
+    background-color: #4EADFF;
+    color: #fff;
+    font-weight: 700;
 }

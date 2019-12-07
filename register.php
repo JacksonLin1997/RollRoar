@@ -14,8 +14,8 @@
 
 <nav class="navbar navbar-dark bg-dark">
   <div class="left"></div>
-  <a class="navbar-brand mx-auto" href="#"> 
-    <div class="logo"></div>
+  <a class="navbar-brand mx-auto" href="home.php"> 
+    <img src="img/logo.png" alt="">
     <h4>說說</h4></a>
   <form class="form-inline">
     <div class="dropdown">

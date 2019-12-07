@@ -77,7 +77,7 @@ if (isset($_POST['signup-submit'])){
                     $_SESSION['userUid'] = $username;
                     $_SESSION['userPoints'] = $points;
 
-                    header("location: ../register.php?signup=success");
+                    header("location: ../login.php?signup=success");
                     exit();
                 }
             }

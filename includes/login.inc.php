@@ -35,22 +35,7 @@ if (isset($_POST['login-submit'])){
                     $_SESSION['userUid'] = $row['uidUsers'];
                     $_SESSION['userPoints'] = $row['pointsUsers'];
 
-                    $sql = "SELECT * FROM games WHERE gameId=1;";
-                    $result = mysqli_query($conn, $sql);
-                    $resultCheck = mysqli_num_rows($result);
-
-                    if ($resultCheck > 0){
-                        $row = mysqli_fetch_assoc($result);
-                        $poolA = $row['poolA'];
-                        $poolB = $row['poolB'];
-                        $poolSum = $poolA + $poolB;
-                        
-                        $_SESSION['poolSum'] = $poolSum;
-                        $_SESSION['poolA'] = $poolA;
-                        $_SESSION['poolB'] = $poolB;
-                    }
-
-                    header("location: ../login.php?login=success");
+                    header("location: ../home.php?login=success");
                     exit();
                 }
                 else {

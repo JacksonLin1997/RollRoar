@@ -339,7 +339,7 @@
     text-decoration: none;
     cursor: pointer;
 }
-.voting .question .align_center .modal .modal-content input{
+.voting .question .align_center .modal .modal-content input[type=text]{
     display: block;
     margin: auto;
     width: 512px;
@@ -359,16 +359,87 @@
 .voting .question .align_center .modal .modal-content .coin{
     margin-top: 50px;
     margin-left: 40px;
+    display: flex;
+    align-items: center;
 }
-.voting .question .align_center .modal .modal-content .coin img{
-    margin: 0 6px;
+.voting .question .align_center .modal .modal-content .coin input[id=coin5]{
+    width: 70px;
+    height: 70px;
+    background-color: #333b4b;
+    background: url(img/popup_window/coin5.png) no-repeat;
     cursor: pointer;
+    border-radius: 50%;
+    border: none;
     transition-duration: 0.1s;
+    margin: 0 6px;
 }
-.voting .question .align_center .modal .modal-content .coin img:hover{
+.voting .question .align_center .modal .modal-content .coin input[id=coin10]{
+    width: 70px;
+    height: 70px;
+    background-color: #333b4b;
+    background: url(img/popup_window/coin10.png) no-repeat;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    transition-duration: 0.1s;
+    margin: 0 6px;
+}
+.voting .question .align_center .modal .modal-content .coin input[id=coin50]{
+    width: 70px;
+    height: 70px;
+    background-color: #333b4b;
+    background: url(img/popup_window/coin50.png) no-repeat;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    transition-duration: 0.1s;
+    margin: 0 6px;
+}
+.voting .question .align_center .modal .modal-content .coin input[id=coin100]{
+    width: 100px;
+    height: 60px;
+    background-color: #333b4b;
+    background: url(img/popup_window/coin100.png) no-repeat;
+    cursor: pointer;
+    border: none;
+    transition-duration: 0.1s;
+    margin: 0 6px;
+}
+.voting .question .align_center .modal .modal-content .coin input[id=coin500]{
+    width: 100px;
+    height: 60px;
+    background-color: #333b4b;
+    background: url(img/popup_window/coin500.png) no-repeat;
+    cursor: pointer;
+    border: none;
+    transition-duration: 0.1s;
+    margin: 0 6px;
+}
+.voting .question .align_center .modal .modal-content .coin input[id=coin1000]{
+    width: 130px;
+    height: 60px;
+    background-color: #333b4b;
+    background: url(img/popup_window/coin1000.png) no-repeat;
+    cursor: pointer;
+    border: none;
+    transition-duration: 0.1s;
+    margin: 0 6px;
+}
+.voting .question .align_center .modal .modal-content .coin input[id=coin0]{
+    width: 70px;
+    height: 70px;
+    background-color: #333b4b;
+    background: url(img/popup_window/coin0.png) no-repeat;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    transition-duration: 0.1s;
+    margin: 0 6px;
+}
+.voting .question .align_center .modal .modal-content .coin input[type=button]:hover{
     opacity: 0.5;
 }
-.voting .question .align_center .modal .modal-content .coin img:active{
+.voting .question .align_center .modal .modal-content .coin input[type=button]:active{
     transform: translateY(5px);
 }
 .voting .question .align_center .modal .modal-content p{
@@ -389,6 +460,11 @@
     margin-right: 56px;
     transition-duration: 0.1s;
 }
+.voting .question .align_center .modal .modal-content .v_button .win_but1 .real_but1{
+    background-color: #333b4b;
+    cursor: pointer;
+    border: none;
+}
 .voting .question .align_center .modal .modal-content .v_button .win_but1:hover{
     opacity: 0.5;
 }
@@ -408,6 +484,11 @@
     position: relative;
     cursor: pointer;
     transition-duration: 0.1s;
+}
+.voting .question .align_center .modal .modal-content .v_button .win_but2 .real_but2{
+    background-color: #333b4b;
+    cursor: pointer;
+    border: none;
 }
 .voting .question .align_center .modal .modal-content .v_button .win_but2:hover{
     opacity: 0.5;
