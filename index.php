@@ -51,7 +51,7 @@
                                     if (isset($_SESSION['userUid'])){
                                         echo '<a class="dropdown-item" href="#">'.$_SESSION['userUid'].'</a>';
                                         echo '<a class="dropdown-item" href="login.php?status=logout">登出</a>';
-                                        echo '<a class="dropdown-item" href="user_activity.php">活動紀錄</a>';
+                                        echo '<a class="dropdown-item" href="history.php">活動紀錄</a>';
                                     } else {
                                         echo '<a class="dropdown-item" href="login.php">登入</a>';
                                     }
@@ -138,7 +138,7 @@
 
                                                     while ($row = mysqli_fetch_assoc($result)){
                                                         echo 
-                                                        '<div class="col-md-4" onclick="location.href=\'gamePage.php?gameId='.$row['gameId'].'\'" style="cursor: pointer;">
+                                                        '<div class="col-md-4" onclick="location.href=\'game.php?gameId='.$row['gameId'].'\'" style="cursor: pointer;">
                                                             <article class="card">
                                                                 <img class="card-img-top" src="gallery/'.$row['imgFullName'].'" alt="Card image cap">
                                                                 <div class="card-body ">
@@ -269,7 +269,7 @@
 
                                         while ($row = mysqli_fetch_assoc($result)){
                                             echo 
-                                            '<div class="col-md-4" onclick="location.href=\'gamePage.php?gameId='.$row['gameId'].'\'" style="cursor: pointer;">
+                                            '<div class="col-md-4" onclick="location.href=\'game.php?gameId='.$row['gameId'].'\'" style="cursor: pointer;">
                                                 <article class="card">
                                                     <img class="card-img-top" src="gallery/'.$row['imgFullName'].'" alt="Card image cap">
                                                     <div class="card-body ">

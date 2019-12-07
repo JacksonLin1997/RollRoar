@@ -12,7 +12,7 @@
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="gamePage.css">
+    <link rel="stylesheet" href="game.css">
 </head>
 <body>
     
@@ -183,7 +183,7 @@
                     <div class="modal-content">
                         <span class="close">&times;</span>
                         <?php
-                            echo '<form name="gamble" action="includes/gamePage.inc.php?gameId='.$gameId.'" method="post">';
+                            echo '<form name="gamble" action="includes/game.inc.php?gameId='.$gameId.'" method="post">';
                         ?>
                             <input type="text" placeholder="選取金額" name="amount" value='0' readonly>
                             <div class="coin">
@@ -254,7 +254,7 @@
         </div>
     </div>
 
-    <script src="gamePage.js"></script>
+    <script src="game.js"></script>
 
 </body>
 </html>

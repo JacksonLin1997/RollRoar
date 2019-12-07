@@ -14,11 +14,11 @@ if (isset($_POST['poolA-submit'])){
     $amount = $_POST['amount'];
 
     if ($amount == 0){
-        header("location: ../gamePage.php?gameId=$gameId&points=zero");
+        header("location: ../game.php?gameId=$gameId&points=zero");
         exit();
     }
     elseif ($amount > $currentPoints){
-        header("location: ../gamePage.php?gameId=$gameId&points=not_enough");
+        header("location: ../game.php?gameId=$gameId&points=not_enough");
         exit();
     }
 
@@ -46,7 +46,7 @@ if (isset($_POST['poolA-submit'])){
 
     $_SESSION['userPoints'] = $restPoints;
 
-    header("location: ../gamePage.php?gameId=$gameId");
+    header("location: ../game.php?gameId=$gameId");
     exit();
 }
 elseif (isset($_POST['poolB-submit'])){
@@ -54,11 +54,11 @@ elseif (isset($_POST['poolB-submit'])){
     $amount = $_POST['amount'];
 
     if ($amount == 0){
-        header("location: ../gamePage.php?gameId=$gameId&points=zero");
+        header("location: ../game.php?gameId=$gameId&points=zero");
         exit();
     }
     elseif ($amount > $currentPoints){
-        header("location: ../gamePage.php?gameId=$gameId&points=not_enough");
+        header("location: ../game.php?gameId=$gameId&points=not_enough");
         exit();
     }
 
@@ -86,10 +86,10 @@ elseif (isset($_POST['poolB-submit'])){
 
     $_SESSION['userPoints'] = $restPoints;
 
-    header("location: ../gamePage.php?gameId=$gameId");
+    header("location: ../game.php?gameId=$gameId");
     exit();
 }
 else {
-    header("location: ../gamePage.php");
+    header("location: ../game.php");
     exit();
 }
