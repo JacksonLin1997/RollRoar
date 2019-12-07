@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <!-- title name-->
         <title>主頁</title>
-        <link rel="stylesheet" href="home.css">
+        <link rel="stylesheet" href="index.css">
     </head>
 
     <body class="background text-type">
@@ -32,7 +32,7 @@
                         <input type="text" style="color:#edeadb; border-radius:10pt; border-block-color: #edeadb; background-color: transparent;"> 
                     </div>
                     <div class="col-sm-4" style="text-align: center; font-size:24px;">
-                        <a href="home.php" style="color:#edeadb; text-decoration: none;"><img src="img/logo.png" alt=""> 說說 </a>
+                        <a href="index.php" style="color:#edeadb; text-decoration: none;"><img src="img/logo.png" alt=""> 說說 </a>
                     </div>
                     <div class="col-sm-4">
                         <div style="float: right;">
@@ -469,7 +469,7 @@
 
                     echo
                     '<div class="gallery-upload">
-                        <form action="includes/home.inc.php" method="post" enctype="multipart/form-data">
+                        <form action="includes/index.inc.php" method="post" enctype="multipart/form-data">
                             <input type="text" name="filename" placeholder="封面檔名(選填)" style="width: 300px;">
                             <input type="text" name="filetitle" placeholder="賭局標題">
                             <textarea name="filedesc" class="bigger_field" placeholder="賭局描述（ 段落換行之間請使用<br> ）"></textarea>

@@ -43,7 +43,7 @@
                             
                         </form>
                 </div>
-                <a class="navbar-brand mx-auto" href="home.php"> 
+                <a class="navbar-brand mx-auto" href="index.php"> 
                     <img src="img/logo.png" alt="">
                     <h4>說說</h4></a>
                 
@@ -82,7 +82,7 @@
                             <br><br>
                             <!-- breadcrumb -->
                             <ol class="breadcrumb" style="background-color: transparent;">
-                                <li class="breadcrumb-item"><a href="home.php" style="color: black;"><i class="fas fa-chevron-right"></i>&nbsp&nbsp首頁</a></li>
+                                <li class="breadcrumb-item"><a href="index.php" style="color: black;"><i class="fas fa-chevron-right"></i>&nbsp&nbsp首頁</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">活動紀錄</li>
                             </ol>
                             <!-- title -->

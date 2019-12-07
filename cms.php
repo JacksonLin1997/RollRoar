@@ -16,7 +16,7 @@
 <br>
 
 <nav>
-    <a href="home.php">回首頁</a>
+    <a href="index.php">回首頁</a>
 </nav>
 
 <br>
@@ -67,7 +67,7 @@ if ($resultCheck > 0){
 
 <br>
 
-<form action="includes/reward.inc.php" method="post">
+<form action="includes/cms.inc.php" method="post">
 
     <?php
 

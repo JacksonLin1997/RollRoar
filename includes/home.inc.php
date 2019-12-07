@@ -43,7 +43,7 @@ if (isset($_POST['submit'])){
                 include_once "dbh.inc.php";
 
                 if (empty($imageTitle) || empty($imageDesc) || empty($imageAsk) ||empty($expireTime)){
-                    header("location: ../home.php?upload=empty");
+                    header("location: ../index.php?upload=empty");
                     exit();
                 } else {
                     $sql = "SELECT * FROM games;";
@@ -65,7 +65,7 @@ if (isset($_POST['submit'])){
 
                             move_uploaded_file($fileTempName, $fileDestination);
                             
-                            header("location: ../home.php?upload=success");
+                            header("location: ../index.php?upload=success");
                             exit();
                         }
                     }
@@ -89,6 +89,6 @@ elseif (isset($_POST['cms'])){
     exit();
 }
 else {
-    header("location: ../home.php");
+    header("location: ../index.php");
     exit();
 }
