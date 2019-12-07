@@ -24,7 +24,7 @@
         <a href="#"><img src="img/vote_search.png" alt=""></a>
         <input type="text" placeholder="Search...">
         <div class="logo">
-            <a href="home.php"><img src="img/logo.png" alt=""> 說說 </a>
+            <a href="index.php"><img src="img/logo.png" alt=""> 說說 </a>
         </div>
         <img src="img/vote_coin.png" alt="">
         <?php
