@@ -32,7 +32,7 @@
     <div class="col-md-1"></div>    
     <div class="col-md-5 pic1">      
       <div class="textpanel">
-        <div class="ba"></div>
+        <img src="img/logo.png" alt="">
         <h4> 說說!</h4>        
       </div>
     </div>
