@@ -1,9 +1,9 @@
 <?php
 
-$servername = "xpdb01.hihosting.hinet.net:3306";
-$dBUsername = "chjb";
-$dBPassword = "jiabao@84009552@";
-$dBName = "p89846595_mvp";
+$servername = "localhost";
+$dBUsername = "root";
+$dBPassword = "";
+$dBName = "talktalk";
 
 $conn = mysqli_connect($servername, $dBUsername, $dBPassword, $dBName);
 

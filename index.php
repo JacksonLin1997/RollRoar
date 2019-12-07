@@ -72,7 +72,7 @@
                     </ol>
                     <div class="carousel-inner " >
                         <div class="carousel-item top_pic active">
-                            <img class="d-block w-100" src="img/mvp_bg_s.jpg" alt="First slide">
+                            <img class="d-block w-100" src="img/mvp_bg.jpg" alt="First slide">
                             <div class="carousel-caption d-none d-md-block">
                                 <h5>First Image</h5>
                                 <p>這是第一張圖片</p>

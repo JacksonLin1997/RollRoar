@@ -477,7 +477,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: 36px;
+    font-size: 33px;
     color: #ffffff;
 }
 .voting .question .align_center .modal .modal-content .v_button .win_but2{
@@ -502,7 +502,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: 36px;
+    font-size: 33px;
     color: #ffffff;
 }
 .voting .comment{
