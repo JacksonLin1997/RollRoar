@@ -19,7 +19,7 @@
         <!-- bootstrap cdn -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <!-- title name-->
-        <title>主頁</title>
+        <title>說說 TalkTalk</title>
         <link rel="stylesheet" href="index.css">
     </head>
 
@@ -60,7 +60,7 @@
                                 if (isset($currentUser)){
                                     echo '<a class="dropdown-item" href="#">'.$currentUser.'</a>';
                                     echo '<a class="dropdown-item" href="login.php?status=logout">登出</a>';
-                                    echo '<a class="dropdown-item" href="history.php">活動紀錄</a>';
+                                    echo '<a class="dropdown-item" href="history.php">下注紀錄</a>';
                                 } else {
                                     echo '<a class="dropdown-item" href="login.php">登入</a>';
                                 }
@@ -365,7 +365,7 @@
             <div class="banner">
                 <div class="row">
                     <div class="col-sm-6">
-                        <p class="footer-element">&copy; 2019 CHJB App Name</p>
+                        <p class="footer-element">&copy; 2019 CHJB TalkTalk</p>
                     </div>
                     <div class="col-sm-6">
                         <div class="row">
@@ -382,7 +382,7 @@
                             </div>
                             <div class="col-sm-1.5">
                                 <p class="footer-element">
-                                    <img src="img/vote_fb.png" alt="">  說說  talktalk
+                                    <img src="img/vote_fb.png" alt="">  說說  TalkTalk
                                 </p>
                             </div>
                         </div>

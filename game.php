@@ -17,7 +17,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    
+    <?php
+
+    if (isset($_GET['gameId'])){
+        $gameId = $_GET['gameId'];
+    }
+
+    $sql = "SELECT * FROM games WHERE gameId=$gameId";
+    $stmt = mysqli_stmt_init($conn);
+    if (!mysqli_stmt_prepare($stmt, $sql)){
+        echo "SQL statement failed!";
+    } else {
+        mysqli_stmt_execute($stmt);
+        $result = mysqli_stmt_get_result($stmt);
+        $row = mysqli_fetch_assoc($result);
+
+        $gameTitle = $row['gameTitle'];
+        $gameDesc = $row['gameDesc'];
+        $gameAsk = $row['gameAsk'];
+        $imgFullName = $row['imgFullName'];
+
+        $buttonA = $row['buttonA'];
+        $buttonB = $row['buttonB'];
+
+        $poolA = $row['poolA'];
+        $poolB = $row['poolB'];
+        $poolSum = $poolA + $poolB;
+    }
+        
+    echo '<title>'.$gameTitle.' | TalkTalk</title>';
+    
+    ?>
+
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="game.css">
@@ -47,36 +79,6 @@
             <a href="#"><img src="img/vote_user.png" alt=""></a>
         </div>
     </div>
-
-    <?php
-
-    if (isset($_GET['gameId'])){
-        $gameId = $_GET['gameId'];
-    }
-
-    $sql = "SELECT * FROM games WHERE gameId=$gameId";
-    $stmt = mysqli_stmt_init($conn);
-    if (!mysqli_stmt_prepare($stmt, $sql)){
-        echo "SQL statement failed!";
-    } else {
-        mysqli_stmt_execute($stmt);
-        $result = mysqli_stmt_get_result($stmt);
-        $row = mysqli_fetch_assoc($result);
-
-        $gameTitle = $row['gameTitle'];
-        $gameDesc = $row['gameDesc'];
-        $gameAsk = $row['gameAsk'];
-        $imgFullName = $row['imgFullName'];
-
-        $buttonA = $row['buttonA'];
-        $buttonB = $row['buttonB'];
-
-        $poolA = $row['poolA'];
-        $poolB = $row['poolB'];
-        $poolSum = $poolA + $poolB;
-    }
-
-    ?>
 
     <div class="subject">
         <?php
@@ -281,7 +283,7 @@
     <div class="footer">
         <img src="img/logo.png" alt="">
         <div class="copyright">
-            &copy; 2019 CHJB App name
+            &copy; 2019 CHJB TalkTalk
         </div>
         <div class="contact">
             <h4>| &emsp; Contact Us</h4>

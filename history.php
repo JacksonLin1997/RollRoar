@@ -23,7 +23,7 @@
         <!-- icon cdn-->
         <script src="https://kit.fontawesome.com/0920bde990.js" crossorigin="anonymous"></script>
         <!-- title name-->
-        <title>活動紀錄</title>
+        <title>下注紀錄 | TalkTalk</title>
     </head>
     <body>
         <!-- 上方nav -->
@@ -91,11 +91,11 @@
                             <!-- breadcrumb -->
                             <ol class="breadcrumb" style="background-color: transparent;">
                                 <li class="breadcrumb-item"><a href="index.php" style="color: black;"><i class="fas fa-chevron-right"></i>&nbsp&nbsp首頁</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">活動紀錄</li>
+                                <li class="breadcrumb-item active" aria-current="page">下注紀錄</li>
                             </ol>
                             <!-- title -->
                             <div style="padding: 15pt; text-align: center; "> 
-                                <h4>活動紀錄</h4>
+                                <h4>下注紀錄</h4>
                                 <hr size="8px" width="80%">   
                             </div>
                     </div>  
@@ -198,7 +198,7 @@
     <!-- 下方聯絡資料 -->
     <footer class="navbar-static-bottom">
             <div class="navleft">
-                    <p class="footer-element">&copy; 2019 CHJB App Name</p>
+                    <p class="footer-element">&copy; 2019 CHJB TalkTalk</p>
             </div>
             <div class="navright">
                 <form class="form-inline">
@@ -209,7 +209,7 @@
                         <img src="img/vote_email.png" alt="">  talktalk@gmail.com
                     </p>
                     <p class="footer-element">
-                        <img src="img/vote_fb.png" alt="">  說說  talktalk
+                        <img src="img/vote_fb.png" alt="">  說說  TalkTalk
                     </p>
                 </form>
             </div>
