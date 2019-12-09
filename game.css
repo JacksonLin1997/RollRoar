@@ -11,6 +11,7 @@
     background-color: #333e54;
     align-items: center;
     box-sizing: border-box;
+    position: relative;
 }
 .header .select_language{
     width: 112px;
@@ -45,7 +46,8 @@
     width: 257px;
 }
 .header .logo{
-    margin: auto;
+    position: absolute;
+    left: 48%;
 }
 .header .logo a{
     text-decoration: none;
@@ -55,6 +57,14 @@
     font-family: 'Noto Sans TC', sans-serif;
     font-weight: bold;
     display: inline-block;
+}
+.header .align_right{
+    display: flex;
+    clear: both;
+    float: right;
+    position: absolute;
+    right: 44px;
+    align-items: center;
 }
 .header .user_points{
     margin-left: 8px;
@@ -136,6 +146,11 @@
 }
 .voting .main .countdown{
     display: flex;
+    clear: both;
+    float: right;
+    position: absolute;
+    right: 440px;
+    align-items: center;
 }
 .voting .main .countdown .day{
     width: 58px;
@@ -143,7 +158,6 @@
     border-radius: 8px;
     background-color: #edeadb;
     margin-top: 128px;
-    margin-left: 496px;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     font-size: 35px;
@@ -300,7 +314,7 @@
     top: 48%;
     left: 53%;
     transform: translate(-50%, -50%);
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Noto Sans TC', sans-serif;
     font-size: 24px;
     color: #ffffff;
 }
@@ -521,8 +535,8 @@
 }
 .voting .comment .section hr{
     border: 3px solid #4f4f4f;
-    margin-top: 15px;
-    width: 7%;
+    width: 12%;
+    margin: 15px auto 0;
 }
 .voting .comment .section h2{
     padding-top: 44px;
@@ -551,7 +565,7 @@
     font-family: 'Noto Sans TC', sans-serif;
     font-weight: bold;
     font-size: 23px;
-    color: #d7d7d7;
+    color: #7d7d7d;
     background-color: #ffffff;
     transition: 0.5s;
 }

@@ -26,16 +26,18 @@
         <div class="logo">
             <a href="index.php"><img src="img/logo.png" alt=""> 說說 </a>
         </div>
-        <img src="img/vote_coin.png" alt="">
-        <?php
-            if (isset($_SESSION['userPoints'])){
-                echo '<div class="user_points">'.$_SESSION['userPoints'].'</div>';
-            } else {
-                echo '<div class="user_points">???</div>';
-            }
-        ?>
-        <a href="#" class="notification"><img src="img/vote_noti.png" alt=""></a>
-        <a href="#"><img src="img/vote_user.png" alt=""></a>
+        <div class="align_right">
+            <img src="img/vote_coin.png" alt="">
+            <?php
+                if (isset($_SESSION['userPoints'])){
+                    echo '<div class="user_points">'.$_SESSION['userPoints'].'</div>';
+                } else {
+                    echo '<div class="user_points">???</div>';
+                }
+            ?>
+            <a href="#" class="notification"><img src="img/vote_noti.png" alt=""></a>
+            <a href="#"><img src="img/vote_user.png" alt=""></a>
+        </div>
     </div>
 
     <?php
@@ -173,7 +175,7 @@
                         }
                     } else {
                         echo 
-                        '<div class="vote_button">
+                        '<div class="vote_button" onclick="location.href=\'login.php\'">
                             <img src="img/vote_click.png" alt="">
                             <div class="vote_text">請先登入</div>
                         </div>';
@@ -232,10 +234,20 @@
             <div class="section">
                 <h1>Message</h1>
                 <hr>
-                <h2>193則留言</h2>
+                <h2>0 則留言</h2>
                 <div class="message">
                     <img src="img/vote_user.png" alt="">
-                    <input type="text" placeholder="投票以開啟留言功能！">
+                    <?php
+                        if (isset($_SESSION['userUid'])){
+                            if ($resultCheck > 0){
+                                echo '<input type="text" placeholder="輸入我的留言...">';
+                            } else {
+                                echo '<input type="text" placeholder="投票以開啟留言功能！" readonly>';
+                            }
+                        } else {
+                            echo '<input type="text" placeholder="登入以查看留言版！" readonly>';
+                        }
+                    ?>
                 </div>
             </div>
         </div>

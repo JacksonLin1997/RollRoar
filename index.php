@@ -66,17 +66,14 @@
                 <div id="carousel" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
                         <li data-target="#carousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#carousel" data-slide-to="1"></li>
+                        <!-- <li data-target="#carousel" data-slide-to="1"></li>
                         <li data-target="#carousel" data-slide-to="2"></li>
-                        <li data-target="#carousel" data-slide-to="3"></li>
+                        <li data-target="#carousel" data-slide-to="3"></li> -->
                     </ol>
-                    <div class="carousel-inner " >
+                    <div class="carousel-inner">
                         <div class="carousel-item top_pic active">
                             <img class="d-block w-100" src="img/mvp_bg.jpg" alt="First slide">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>First Image</h5>
-                                <p>這是第一張圖片</p>
-                            </div>
+                            <div class="carousel-caption d-none d-md-block"></div>
                         </div>
                         <!-- <div class="carousel-item top_pic">
                             <img class="d-block w-100" src="img/main_pic2.png" alt="Second slide">
@@ -100,20 +97,20 @@
                             </div>
                         </div> -->
                     </div>
-                    <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev" style="color: black;">
+                    <!-- <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev" style="color: black;">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="sr-only">Previous</span>
                     </a>
                     <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="sr-only">Next</span>
-                    </a>
+                    </a> -->
                 </div>
             </div>
             <!-- 各類型圖示 -->
             <div class="container">
                 <!-- 我的賭局 -->
-                <h4 class="text-type" style="padding-top: 40pt;"><img src="img/main_theme1.png">&nbsp&nbsp我的賭局</h4>
+                <h4 class="text-type" style="padding-top: 40pt;"><img src="img/main_theme1.png">&nbsp&nbsp我的主題</h4>
                 <!-- 多圖輪播 -->
                 <div id="carousel_2" class="carousel slide" data-ride="carousel_2">
                     <div class="carousel-inner" >
@@ -381,86 +378,35 @@
                     <button type="button" class="btn btn-outline-dark" style="border-radius: 20px;">生活風格</button>
                 </div>
                 <!-- 多圖排列 -->
-                <!-- <div class="row">
-                    <div class="col-md-4">                               
-                        <article class="card">
-                            <img class="card-img-top" src="img/main_pic1.png" alt="Card image cap">
-                            <div class="card-body ">
-                                <h5 class="card-title">文字標題</h5>
-                                <p class="card-text">文字內容</p>
-                                <div class="time-font">
-                                    <img src="img/main_time.png" alt="">&nbsp2019.11.10-2019.12.25
-                                </div>
-                                <button type="button" class="btn btn-light" style="border-radius: 20px;"><img src="img/coin.png"> 1,500</button>
-                            </div>
-                        </article>
-                    </div>                                       
-                    <div class="col-md-4">                                        
-                        <article class="card">
-                            <img class="card-img-top" src="img/main_pic2.png" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title">文字標題</h5>
-                                <p class="card-text">文字內容</p>
-                                <div class="time-font">
-                                    <img src="img/main_time.png" alt="">&nbsp2019.11.10-2019.12.25
-                                </div>
-                                <button type="button" class="btn btn-light" style="border-radius: 20px;"><img src="img/coin.png"> 3,500</button>
-                            </div>
-                        </article>
-                    </div>                                        
-                    <div class="col-md-4">                                        
-                        <article class="card">
-                            <img class="card-img-top" src="img/main_pic3.png" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title">文字標題</h5>
-                                <p class="card-text">文字內容</p>
-                                <div class="time-font">
-                                    <img src="img/main_time.png" alt="">&nbsp2019.11.10-2019.12.25
-                                </div>
-                                <button type="button" class="btn btn-light" style="border-radius: 20px;"><img src="img/coin.png"> 500</button>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col-md-4">                               
-                        <article class="card">
-                            <img class="card-img-top" src="img/main_pic1.png" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title">文字標題</h5>
-                                <p class="card-text">文字內容</p>
-                                <div class="time-font">
-                                    <img src="img/main_time.png" alt="">&nbsp2019.11.10-2019.12.25
-                                </div>
-                                <button type="button" class="btn btn-light" style="border-radius: 20px;"><img src="img/coin.png"> 1,500</button>
-                            </div>
-                        </article>
-                    </div>                                       
-                    <div class="col-md-4">                                        
-                        <article class="card">
-                            <img class="card-img-top" src="img/main_pic2.png" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title">文字標題</h5>
-                                <p class="card-text">文字內容</p>
-                                <div class="time-font">
-                                    <img src="img/main_time.png" alt="">&nbsp2019.11.10-2019.12.25
-                                </div>
-                                <button type="button" class="btn btn-light" style="border-radius: 20px;"><img src="img/coin.png"> 3,500</button>
-                            </div>
-                        </article>
-                    </div>                                        
-                    <div class="col-md-4">                                        
-                        <article class="card">
-                            <img class="card-img-top" src="img/main_pic3.png" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title">文字標題</h5>
-                                <p class="card-text">文字內容</p>
-                                <div class="time-font">
-                                    <img src="img/main_time.png" alt="">&nbsp2019.11.10-2019.12.25
-                                </div>
-                                <button type="button" class="btn btn-light" style="border-radius: 20px;"><img src="img/coin.png"> 500</button>
-                            </div>
-                        </article>
-                    </div>
-                </div>   -->
+                <div class="row">
+                    <?php
+                        $sql = "SELECT * FROM games ORDER BY gameOrder DESC";
+                        $stmt = mysqli_stmt_init($conn);
+                        if (!mysqli_stmt_prepare($stmt, $sql)){
+                            echo "SQL statement failed!";
+                        } else {
+                            mysqli_stmt_execute($stmt);
+                            $result = mysqli_stmt_get_result($stmt);
+
+                            while ($row = mysqli_fetch_assoc($result)){
+                                echo 
+                                '<div class="col-md-4" onclick="location.href=\'game.php?gameId='.$row['gameId'].'\'" style="cursor: pointer;">                               
+                                    <article class="card">
+                                        <img class="card-img-top" src="gallery/'.$row['imgFullName'].'" alt="Card image cap">
+                                        <div class="card-body ">
+                                            <h5 class="card-title">'.$row['gameTitle'].'</h5>
+                                            <p class="card-text">'.$row['gameDesc'].'</p>
+                                            <div class="time-font">
+                                                <img src="img/main_time.png" alt="">&nbsp'.$row['expire'].'
+                                            </div>
+                                            <button type="button" class="btn btn-light" style="border-radius: 20px;"><img src="img/coin.png"> '.($row['poolA']+$row['poolB']).'</button>
+                                        </div>
+                                    </article>
+                                </div>';
+                            }
+                        }
+                    ?>
+                </div>  
             </div>
             
         <?php
