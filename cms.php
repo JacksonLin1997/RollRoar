@@ -23,6 +23,12 @@
 
 <?php
 
+$sql4 = "SELECT * FROM users";
+$result4 = mysqli_query($conn, $sql4);
+$resultCheck4 = mysqli_num_rows($result4);
+
+echo '<h1>當前註冊人數：'.$resultCheck4.'</h1>';
+
 $sql = "SELECT * FROM history ORDER BY gameId, side";
 $result = mysqli_query($conn, $sql);
 $resultCheck = mysqli_num_rows($result);
@@ -122,6 +128,12 @@ if ($resultCheck > 0){
 
     <button type="submit" name="reset_history">RESET history</button>
     <button type="submit" name="reset_games">RESET games</button>
+
+    <!-- <br><br>
+
+    <input type="text" name="extra_points">
+    <button type="submit" name="add_points">點數加下去！</button> -->
+
 </form>
 
 </body>

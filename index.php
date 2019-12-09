@@ -1,7 +1,16 @@
 <?php
     require "includes/dbh.inc.php";
     session_start();
+    if (isset($_SESSION['userUid'])){
+        $currentUser = $_SESSION['userUid'];
+        $sql = "SELECT pointsUsers FROM users WHERE uidUsers='$currentUser'";
+        $result = mysqli_query($conn, $sql);
+        $row = mysqli_fetch_assoc($result);
+        $_SESSION['userPoints'] = $row['pointsUsers'];
+        $currentUserPoint = $_SESSION['userPoints'];
+    }
 ?>
+
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -38,8 +47,8 @@
                     <div style="float: right;">
                         <img src="img/coin.png">
                         <?php
-                            if (isset($_SESSION['userPoints'])){
-                                echo '<button type="button" class="btn btn-outline-light" style="border-radius: 20pt;">$ '.$_SESSION['userPoints'].'</button>';
+                            if (isset($currentUserPoint)){
+                                echo '<button type="button" class="btn btn-outline-light" style="border-radius: 20pt;">$ '.$currentUserPoint.'</button>';
                             } else {
                                 echo '<button type="button" class="btn btn-outline-light" style="border-radius: 20pt;"> ??? </button>';
                             }
@@ -48,8 +57,8 @@
                         <img src="img/vote_user.png" class="dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="padding: 12px; height:300%; cursor: pointer;">
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                             <?php
-                                if (isset($_SESSION['userUid'])){
-                                    echo '<a class="dropdown-item" href="#">'.$_SESSION['userUid'].'</a>';
+                                if (isset($currentUser)){
+                                    echo '<a class="dropdown-item" href="#">'.$currentUser.'</a>';
                                     echo '<a class="dropdown-item" href="login.php?status=logout">登出</a>';
                                     echo '<a class="dropdown-item" href="history.php">活動紀錄</a>';
                                 } else {
@@ -63,7 +72,7 @@
         </div>
         <!-- 輪播圖片 -->
         <div class="row">
-            <div id="carousel" class="carousel slide" data-ride="carousel">
+            <div id="carousel" class="carousel slide" data-interval="false" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#carousel" data-slide-to="0" class="active"></li>
                     <!-- <li data-target="#carousel" data-slide-to="1"></li>
@@ -104,11 +113,10 @@
             <!-- 我的賭局 -->
             <h4 class="text-type" style="padding-top: 40pt;"><img src="img/main_theme1.png">&nbsp&nbsp我的主題</h4>
             <!-- 多圖輪播 -->
-            <div id="carousel_2" class="carousel slide" data-ride="carousel_2">
+            <div id="carousel_2" class="carousel slide" data-interval="false" data-ride="carousel_2">
                 <div class="carousel-inner" >
                     <?php
-                        if (isset($_SESSION['userUid'])){
-                            $currentUser = $_SESSION['userUid'];
+                        if (isset($currentUser)){
                             $sql3 = "SELECT gameId FROM history WHERE person='$currentUser' ORDER BY gameId DESC";
                             $result3 = mysqli_query($conn, $sql3);
                             $resultCheck3 = mysqli_num_rows($result3);
@@ -192,7 +200,7 @@
             <!-- 熱門主題 -->
             <h4 class="text-type" style="padding-top: 40pt;"><img src="img/main_theme2.png">&nbsp&nbsp熱門主題</h4>
             <!-- 多圖輪播 -->
-            <div id="carousel_3" class="carousel slide" data-ride="carousel_3">
+            <div id="carousel_3" class="carousel slide" data-interval="false" data-ride="carousel_3">
                 <div class="carousel-inner" >
                     <?php
                         $sql = "SELECT * FROM games ORDER BY gameOrder DESC";
@@ -299,7 +307,7 @@
                                     <img class="card-img-top" src="gallery/'.$row['imgFullName'].'" alt="Card image cap">
                                     <div class="card-body ">
                                         <h5 class="card-title">'.$row['gameTitle'].'</h5>
-                                        <p class="card-text">'.$row['gameDesc'].'</p>
+                                        <p class="card-text"></p>
                                         <div class="time-font">
                                             <img src="img/main_time.png" alt="">&nbsp'.$row['expire'].'
                                         </div>
@@ -314,8 +322,8 @@
         </div>
             
         <?php
-            if (isset($_SESSION['userUid'])){
-                if ($_SESSION['userUid'] == "admin"){
+            if (isset($currentUser)){
+                if ($currentUser == "admin"){
 
                     echo
                     '<div class="gallery-upload">
@@ -341,6 +349,13 @@
                 if ($_GET['upload'] == "empty"){
                     echo '<script language="javascript">
                     alert("請填寫完整上傳欄位");
+                    </script>';
+                }
+            }
+            if (isset($_GET['signup'])){
+                if ($_GET['signup'] == "success"){
+                    echo '<script language="javascript">
+                    alert("註冊成功＊恭喜獲得1000點數＊");
                     </script>';
                 }
             }

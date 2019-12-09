@@ -1,6 +1,14 @@
 <?php
     require "includes/dbh.inc.php";
     session_start();
+    if (isset($_SESSION['userUid'])){
+        $currentUser = $_SESSION['userUid'];
+        $sql = "SELECT pointsUsers FROM users WHERE uidUsers='$currentUser'";
+        $result = mysqli_query($conn, $sql);
+        $row = mysqli_fetch_assoc($result);
+        $_SESSION['userPoints'] = $row['pointsUsers'];
+        $currentUserPoint = $_SESSION['userPoints'];
+    }
 ?>
 
 <!DOCTYPE html>
@@ -51,8 +59,8 @@
                     <form class="form-inline">           
                         <img src="img/coin.png"style="padding: 12px">
                         <?php
-                            if (isset($_SESSION['userPoints'])){
-                                echo '<button type="button" class="btn btn-outline-light" style="border-radius: 20pt;">$ '.$_SESSION['userPoints'].'</button>';
+                            if (isset($currentUserPoint)){
+                                echo '<button type="button" class="btn btn-outline-light" style="border-radius: 20pt;">$ '.$currentUserPoint.'</button>';
                             } else {
                                 echo '<button type="button" class="btn btn-outline-light" style="border-radius: 20pt;">$ ???</button>';
                             }
@@ -62,8 +70,8 @@
                             <img src="img/vote_user.png" class="dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"style="padding: 12px; height:300%; cursor: pointer;">
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
                                 <?php
-                                    if (isset($_SESSION['userUid'])){
-                                        echo '<a class="dropdown-item" href="#">'.$_SESSION['userUid'].'</a>';
+                                    if (isset($currentUser)){
+                                        echo '<a class="dropdown-item" href="#">'.$currentUser.'</a>';
                                         echo '<a class="dropdown-item" href="login.php?status=logout">登出</a>';
                                     } else {
                                         echo '<a class="dropdown-item" href="login.php">登入</a>';
@@ -95,8 +103,6 @@
             </div>
             <!-- 多圖排列 -->
             <?php
-                $currentUser = $_SESSION['userUid'];
-
                 $sql = "SELECT gameId, side, amount, time_stamp, reward FROM history WHERE person='$currentUser'";
                 $result = mysqli_query($conn, $sql);
                 $resultCheck = mysqli_num_rows($result);

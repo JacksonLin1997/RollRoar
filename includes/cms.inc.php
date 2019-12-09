@@ -101,6 +101,15 @@ elseif (isset($_POST['reset_games'])){
     header("location: ../cms.php");
     exit();
 }
+// elseif (isset($_POST['add_points'])){
+
+//     $extra = $_POST['extra_points'];
+//     $sql = "UPDATE users SET pointsUsers=pointsUsers+$extra";
+//     mysqli_query($conn, $sql);
+
+//     header("location: ../cms.php");
+//     exit();
+// }
 else {
     header("location: ../cms.php");
     exit();

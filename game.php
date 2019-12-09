@@ -1,6 +1,14 @@
 <?php
     require "includes/dbh.inc.php";
     session_start();
+    if (isset($_SESSION['userUid'])){
+        $currentUser = $_SESSION['userUid'];
+        $sql = "SELECT pointsUsers FROM users WHERE uidUsers='$currentUser'";
+        $result = mysqli_query($conn, $sql);
+        $row = mysqli_fetch_assoc($result);
+        $_SESSION['userPoints'] = $row['pointsUsers'];
+        $currentUserPoint = $_SESSION['userPoints'];
+    }
 ?>
 
 <!DOCTYPE html>
@@ -29,8 +37,8 @@
         <div class="align_right">
             <img src="img/vote_coin.png" alt="">
             <?php
-                if (isset($_SESSION['userPoints'])){
-                    echo '<div class="user_points">'.$_SESSION['userPoints'].'</div>';
+                if (isset($currentUserPoint)){
+                    echo '<div class="user_points">'.$currentUserPoint.'</div>';
                 } else {
                     echo '<div class="user_points">???</div>';
                 }
@@ -118,51 +126,64 @@
                 <hr>
                 <div class="chart_wrap">
                     <div class="chart">
-                        <div class="chart1">
-                            <?php
-                                if ($poolSum == 0){
-                                    echo '<h4>0 %</h4>';
-                                } else {
-                                    $poolRatioA = round(($poolA/$poolSum)*100);
-                                    echo '<h4>'.$poolRatioA.' %</h4>';
-                                }
-                                echo '<img src="img/vote_game1.png" alt="">
-                                <h5>'.$buttonA.'</h5>';
-                            ?>
-                        </div>
-                        <div class="chart2">
-                            <?php
-                                if ($poolSum == 0){
-                                    echo '<h4>0 %</h4>';
-                                } else {
-                                    $poolRatioB = round(($poolB/$poolSum)*100);
-                                    echo '<h4>'.$poolRatioB.' %</h4>';
-                                }
-                                echo '<img src="img/vote_game2.png" alt="">
-                                <h5>'.$buttonB.'</h5>';
-                            ?>
-                        </div>
+                        <?php
+                            if ($poolSum == 0){
+                                $maxRatio = 0;
+                                echo 
+                                '<div class="chart1">
+                                    <h4>? %</h4>
+                                    <img src="img/vote_game1.png" alt="">
+                                    <h5>'.$buttonA.'</h5>
+                                </div>
+                                <div class="chart2">
+                                    <h4>? %</h4>
+                                    <img src="img/vote_game2.png" alt="">
+                                    <h5>'.$buttonB.'</h5>
+                                </div>';
+                            } else {
+                                $poolRatioA = round(($poolA/$poolSum)*100);
+                                $poolRatioB = round(($poolB/$poolSum)*100);
+                                $maxRatio = max($poolRatioA, $poolRatioB);
+                                echo 
+                                '<div class="chart1">
+                                    <h4>'.$poolRatioA.' %</h4>
+                                    <img src="img/vote_game1.png" alt="" style="width: 150px; height: '.(3*$poolRatioA).'px;">
+                                    <h5>'.$buttonA.'</h5>
+                                </div>
+                                <div class="chart2">
+                                    <h4>'.$poolRatioB.' %</h4>
+                                    <img src="img/vote_game2.png" alt="" style="width: 150px; height: '.(3*$poolRatioB).'px;">
+                                    <h5>'.$buttonB.'</h5>
+                                </div>';
+                            }
+
+                            if ($maxRatio == 0){
+                                $gap = 50;
+                            } else {
+                                $gap = 20 + 80*((100-$maxRatio)/50);
+                            }
+                        ?>
                     </div>
                 </div>
                 <?php
-                    if (isset($_SESSION['userUid'])){
+                    if (isset($currentUser)){
                         if ($remainTime){
                             $sql = "SELECT person FROM history WHERE person=? AND gameId=$gameId";
                             $stmt = mysqli_stmt_init($conn);
                             if (mysqli_stmt_prepare($stmt, $sql)){
-                                mysqli_stmt_bind_param($stmt, "s", $_SESSION['userUid']);
+                                mysqli_stmt_bind_param($stmt, "s", $currentUser);
                                 mysqli_stmt_execute($stmt);
                                 mysqli_stmt_store_result($stmt);
                                 $resultCheck = mysqli_stmt_num_rows($stmt);
                                 if ($resultCheck > 0){
                                     echo 
-                                    '<div class="vote_button">
+                                    '<div class="vote_button" style="margin-top: '.$gap.'px;">
                                         <img src="img/vote_click.png" alt="">
                                         <div class="vote_text">已下注</div>
                                     </div>';
                                 } else {
                                     echo 
-                                    '<div class="vote_button" id="myBtn">
+                                    '<div class="vote_button" id="myBtn" style="margin-top: '.$gap.'px;">
                                         <img src="img/vote_click.png" alt="">
                                         <div class="vote_text">VOTE</div>
                                     </div>';
@@ -170,14 +191,14 @@
                             }
                         } else {
                             echo 
-                            '<div class="vote_button">
+                            '<div class="vote_button" style="margin-top: '.$gap.'px;">
                                 <img src="img/vote_click.png" alt="">
                                 <div class="vote_text">已結束</div>
                             </div>';
                         }
                     } else {
                         echo 
-                        '<div class="vote_button" onclick="location.href=\'login.php\'">
+                        '<div class="vote_button" onclick="location.href=\'login.php\'" style="margin-top: '.$gap.'px;">
                             <img src="img/vote_click.png" alt="">
                             <div class="vote_text">請先登入</div>
                         </div>';
@@ -232,7 +253,9 @@
                 </div>
             </div>
         </div>
-        <div class="comment">
+        <?php
+            echo '<div class="comment" style="padding-top: '.($gap+100).'px;">';
+        ?>
             <div class="section">
                 <h1>Message</h1>
                 <hr>
@@ -240,7 +263,7 @@
                 <div class="message">
                     <img src="img/vote_user.png" alt="">
                     <?php
-                        if (isset($_SESSION['userUid'])){
+                        if (isset($currentUser)){
                             if ($resultCheck > 0){
                                 echo '<input type="text" placeholder="輸入我的留言...">';
                             } else {

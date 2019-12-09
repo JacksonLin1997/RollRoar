@@ -305,7 +305,7 @@
     padding-top: 20px;
 }
 .voting .question .align_center .vote_button{
-    margin-top: 62px;
+    /* margin-top: 62px; */
     display: flex;
     position: relative;
     cursor: pointer;
@@ -496,6 +496,7 @@
     transform: translate(-50%, -50%);
     font-family: 'Noto Sans TC', sans-serif;
     font-size: 33px;
+    line-height: 36px;
     color: #ffffff;
 }
 .voting .question .align_center .modal .modal-content .v_button .win_but2{
@@ -521,10 +522,11 @@
     transform: translate(-50%, -50%);
     font-family: 'Noto Sans TC', sans-serif;
     font-size: 33px;
+    line-height: 36px;
     color: #ffffff;
 }
 .voting .comment{
-    padding-top: 144px;
+    /* padding-top: 144px; */
     display: flex;
 }
 .voting .comment .section{

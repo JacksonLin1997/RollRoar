@@ -3,7 +3,7 @@
 require "dbh.inc.php";
 session_start();
 $currentUser = $_SESSION['userUid'];
-$currentPoints = $_SESSION['userPoints'];
+$currentUserPoint = $_SESSION['userPoints'];
 
 $timeStamp = time();
 
@@ -17,12 +17,12 @@ if (isset($_POST['poolA-submit'])){
         header("location: ../game.php?gameId=$gameId&points=zero");
         exit();
     }
-    elseif ($amount > $currentPoints){
+    elseif ($amount > $currentUserPoint){
         header("location: ../game.php?gameId=$gameId&points=not_enough");
         exit();
     }
 
-    $restPoints = $currentPoints - $amount;
+    $restPoints = $currentUserPoint - $amount;
     
     $sql = "UPDATE games SET poolA = poolA+? WHERE gameId=$gameId";
     $stmt = mysqli_stmt_init($conn);
@@ -44,8 +44,6 @@ if (isset($_POST['poolA-submit'])){
     $sql4 = "INSERT INTO history (gameId, person, side, amount, time_stamp) VALUES ($gameId, '$currentUser', '$buttonA', '$amount', '$timeStamp')";
     mysqli_query($conn, $sql4);
 
-    $_SESSION['userPoints'] = $restPoints;
-
     header("location: ../game.php?gameId=$gameId");
     exit();
 }
@@ -57,12 +55,12 @@ elseif (isset($_POST['poolB-submit'])){
         header("location: ../game.php?gameId=$gameId&points=zero");
         exit();
     }
-    elseif ($amount > $currentPoints){
+    elseif ($amount > $currentUserPoint){
         header("location: ../game.php?gameId=$gameId&points=not_enough");
         exit();
     }
 
-    $restPoints = $currentPoints - $amount;
+    $restPoints = $currentUserPoint - $amount;
     
     $sql = "UPDATE games SET poolB = poolB+? WHERE gameId=$gameId";
     $stmt = mysqli_stmt_init($conn);
@@ -83,8 +81,6 @@ elseif (isset($_POST['poolB-submit'])){
 
     $sql4 = "INSERT INTO history (gameId, person, side, amount, time_stamp) VALUES ($gameId, '$currentUser', '$buttonB', '$amount', '$timeStamp')";
     mysqli_query($conn, $sql4);
-
-    $_SESSION['userPoints'] = $restPoints;
 
     header("location: ../game.php?gameId=$gameId");
     exit();
