@@ -116,30 +116,32 @@
                     echo '<h3>Q: '.$gameAsk.'</h3>';
                 ?>
                 <hr>
-                <div class="chart">
-                    <div class="chart1">
-                        <?php
-                            if ($poolSum == 0){
-                                echo '<h4>0 %</h4>';
-                            } else {
-                                $poolRatioA = round(($poolA/$poolSum)*100);
-                                echo '<h4>'.$poolRatioA.' %</h4>';
-                            }
-                            echo '<img src="img/vote_game1.png" alt="">
-                            <h5>'.$buttonA.'</h5>';
-                        ?>
-                    </div>
-                    <div class="chart2">
-                        <?php
-                            if ($poolSum == 0){
-                                echo '<h4>0 %</h4>';
-                            } else {
-                                $poolRatioB = round(($poolB/$poolSum)*100);
-                                echo '<h4>'.$poolRatioB.' %</h4>';
-                            }
-                            echo '<img src="img/vote_game2.png" alt="">
-                            <h5>'.$buttonB.'</h5>';
-                        ?>
+                <div class="chart_wrap">
+                    <div class="chart">
+                        <div class="chart1">
+                            <?php
+                                if ($poolSum == 0){
+                                    echo '<h4>0 %</h4>';
+                                } else {
+                                    $poolRatioA = round(($poolA/$poolSum)*100);
+                                    echo '<h4>'.$poolRatioA.' %</h4>';
+                                }
+                                echo '<img src="img/vote_game1.png" alt="">
+                                <h5>'.$buttonA.'</h5>';
+                            ?>
+                        </div>
+                        <div class="chart2">
+                            <?php
+                                if ($poolSum == 0){
+                                    echo '<h4>0 %</h4>';
+                                } else {
+                                    $poolRatioB = round(($poolB/$poolSum)*100);
+                                    echo '<h4>'.$poolRatioB.' %</h4>';
+                                }
+                                echo '<img src="img/vote_game2.png" alt="">
+                                <h5>'.$buttonB.'</h5>';
+                            ?>
+                        </div>
                     </div>
                 </div>
                 <?php
