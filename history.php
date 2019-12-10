@@ -48,30 +48,7 @@
                     <h4>說說</h4></a>
                 
                 <div class="navright collapse navbar-collapse" id="navbarTogglerDemo02">
-                    <form class="form-inline">           
-                        <img src="img/coin.png"style="padding: 12px">
-                        <?php
-                            if (isset($_SESSION['userPoints'])){
-                                echo '<button type="button" class="btn btn-outline-light" style="border-radius: 20pt;">$ '.$_SESSION['userPoints'].'</button>';
-                            } else {
-                                echo '<button type="button" class="btn btn-outline-light" style="border-radius: 20pt;">$ ???</button>';
-                            }
-                        ?>
-                        <img src="img/vote_noti.png"  style="padding: 12px; height:300%;">
-                        <div class="dropdown">
-                            <img src="img/vote_user.png" class="dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"style="padding: 12px; height:300%; cursor: pointer;">
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
-                                <?php
-                                    if (isset($_SESSION['userUid'])){
-                                        echo '<a class="dropdown-item" href="#">'.$_SESSION['userUid'].'</a>';
-                                        echo '<a class="dropdown-item" href="login.php?status=logout">登出</a>';
-                                    } else {
-                                        echo '<a class="dropdown-item" href="login.php">登入</a>';
-                                    }
-                                ?>
-                            </div>
-                        </div>
-                    </form> 
+           
                 </div>           
         </nav>
         <!-- 主要內容 -->

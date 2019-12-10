@@ -18,21 +18,54 @@ html, body {
 }
 
 nav{
-  height: 50pt;
+  background-color: #333e54;
+  min-height: 70px;
+}
+.navbar-brand {
+  transform: translateX(-50%);
+  left: 50%;
+  position: absolute;
+  top: 15px;
 }
 
-.left {
-  display: inline-block;
-  width: 7%;
-  height: 100%;
+.navleft{
+  display: flex;
+  justify-content: flex-start;
+  flex-grow: 1;
+}
+
+/* #navsearch{
+  margin: 12px;
+  border-left-style:solid; 
+  border-width:0.05px; 
+  border-left-color: #edeadb;
+} */
+.navright{
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+}
+.dropbtn {
+  color: #edeadb;
+  padding: 1.5vh;
+  font-size: 16px;
+  background-color: rgb(51,62,84);
+  float:left;
+  /* border-right-style:solid; 
+  padding-right:10px;
+  border-width:0.05px; 
+  border-right-color: #edeadb; */
+  /* z-index: 1; */
+}
+.dropbtn:hover, .dropbtn:focus {
+  color: #edeadb;
 }
 
 a.navbar-brand.mx-auto h4 {
   display: inline-block;
-  margin: 0px;
+  /* font-weight: bold;
+  margin: 0px; */
 }
-
-
 .logo {
   display: inline-block;
   width: 20px;
@@ -40,23 +73,29 @@ a.navbar-brand.mx-auto h4 {
   background-color: #fff;
 }
 
-.dropbtn {
-  color: white;
-  padding: 1.5vh;
-  font-size: 16px;
-  background-color: transparent;
-  float:left;
+
+.btn{  
+  width: 80pt;
+  outline: none;
 }
+
 
 .container-fluid .row {
   display: flex;
   flex-wrap: wrap;
+  min-height: 508px ; 
+}
+
+
+.col-md-5{
+  min-height: 450px ; 
 }
 .col-md-5.pic1 {
   background-image: url(https://i.imgur.com/DITety2.png);
-  background-size: auto 140%;
+  background-size: auto 120%;
   background-position: center bottom;
   background-repeat: no-repeat;
+  /* min-height: 100%; */
 }
 .textpanel {
   margin: 15%;
@@ -114,7 +153,7 @@ a.pull-right {
   width: 110px;
   height: 40px;
   background-image: url(https://i.imgur.com/TjXh7JQ.png);
-  background-size: auto 160%;
+  background-size: auto 140%;
   background-position: center center;
   border-radius: 10px;
 }
@@ -123,7 +162,7 @@ a.pull-right {
   width: 110px;
   height: 40px;
   background-image: url(https://i.imgur.com/xxqUtSm.png);
-  background-size: auto 130%;
+  background-size: auto 120%;
   background-position: center center;
   border-radius: 10px;
 }
@@ -132,4 +171,16 @@ a.pull-right {
 }
 .newuser a {
   display: inline;
+}
+.alert-dismissible{
+  padding: 0rem;
+}
+.alert-dismissible .close{
+  padding: 0rem 0rem;
+  right: 5px;
+  top: -2px;
+  outline:none;
+}
+.alert{
+  padding: 0.25rem 0.25rem;
 }
