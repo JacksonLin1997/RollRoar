@@ -1,6 +1,57 @@
-.banner{
+/* .banner{
     background-color: rgb(51,62,84);
     width: 100%;
+} */
+input{
+    outline:none;
+    padding-left: 10px;
+    color:#edeadb; 
+    border-radius:10pt; 
+    background-color: transparent;
+    border-color: #edeadb;
+    border-style: solid;
+}
+.form-inline{
+    margin: 0pt;
+}
+nav{
+    background-color: #333e54;
+    min-height: 70px;
+}
+
+/* .navbar{
+    padding: 8px,8px,16px,16px;
+} */
+
+.navbar-brand {
+    transform: translateX(-50%);
+    left: 50%;
+    position: absolute;
+    top: 15px;
+}
+
+.navleft{
+    display: flex;
+    justify-content: flex-start;
+    flex-grow: 1;
+}
+.search{
+    padding: 12px;
+    border-left-style:solid; 
+    border-width:0.05px; 
+    border-left-color: #707070;
+}
+/* #navsearch{
+    margin: 12px;
+    border-left-style:solid; 
+    border-width:0.05px; 
+    border-left-color: #edeadb;
+} */
+
+.navright{
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
 }
 
 .dropbtn {
@@ -9,7 +60,42 @@
     font-size: 16px;
     background-color: rgb(51,62,84);
     float:left;
-  }
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    color: #edeadb;
+}
+
+a.navbar-brand.mx-auto h4 {
+    display: inline-block;
+    /* font-weight: bold;
+    margin: 0px; */
+}
+.logo {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+}
+
+.money{
+    border-radius: 20pt;
+    background-color: #212834;
+    border-color:  #edeadb;
+    color: #edeadb;
+}
+
+.btn:disabled{
+    opacity: 1;
+}
+
+.card-money{
+    border-radius: 15pt;
+    box-shadow:0px 4px rgba(20%,20%,40%,0.5);
+    font-size: 11pt;
+    width: 95px;
+    height: 35px;
+}
 
 .background {
     background-color: #edeadc;
@@ -33,14 +119,14 @@
 }
 
 .btn-outline-dark{
-    font-family : "Microsoft JhengHei";
+    font-family : "微軟正黑體","Microsoft JhengHei";
     font-weight : bold;
     width: 100px;
     margin:5px;
 }
 
 .btn .btn-dark{
-    font-family : "Microsoft JhengHei";
+    font-family : "微軟正黑體","Microsoft JhengHei";
     font-weight : bold;
     height:30px; 
     margin: 10px;
@@ -72,11 +158,6 @@
     color: #edeadb;
     margin: 2.5vh;
     font-size: 14px;
-}
-
-.upper-nav {
-    margin-right: 0px !important; 
-    margin-left: 0px !important;
 }
 
 .time-font{
