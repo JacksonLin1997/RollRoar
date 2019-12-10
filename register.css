@@ -23,10 +23,55 @@ html, body {
   height: 100%;
 } */
 
-a.navbar-brand.mx-auto h4 {
-  display: inline-block;
+nav{
+  background-color: #333e54;
+  min-height: 70px;
+}
+.navbar-brand {
+  transform: translateX(-50%);
+  left: 50%;
+  position: absolute;
+  top: 15px;
 }
 
+.navleft{
+  display: flex;
+  justify-content: flex-start;
+  flex-grow: 1;
+}
+
+/* #navsearch{
+  margin: 12px;
+  border-left-style:solid; 
+  border-width:0.05px; 
+  border-left-color: #edeadb;
+} */
+.navright{
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+}
+.dropbtn {
+  color: #edeadb;
+  padding: 1.5vh;
+  font-size: 16px;
+  background-color: rgb(51,62,84);
+  float:left;
+  /* border-right-style:solid; 
+  padding-right:10px;
+  border-width:0.05px; 
+  border-right-color: #edeadb; */
+  /* z-index: 1; */
+}
+.dropbtn:hover, .dropbtn:focus {
+  color: #edeadb;
+}
+
+a.navbar-brand.mx-auto h4 {
+  display: inline-block;
+  /* font-weight: bold;
+  margin: 0px; */
+}
 .logo {
   display: inline-block;
   width: 20px;
@@ -34,22 +79,28 @@ a.navbar-brand.mx-auto h4 {
   background-color: #fff;
 }
 
-.dropbtn {
-  color: white;
-  padding: 1.5vh;
-  font-size: 16px;
-  background-color: transparent;
-  float:left;
+
+.btn{  
+  width: 80pt;
+  outline: none;
 }
+
+
+
 
 .container-fluid .row {
   display: flex;
   flex-wrap: wrap;
+  min-height: 508px ; 
+}
+
+.col-md-5{
+  min-height: 450px ; 
 }
 
 .container-fluid .row .col-md-5.pic1 {
   background-image: url(https://i.imgur.com/DITety2.png);
-  background-size: auto 140%;
+  background-size: auto 120%;
   background-position: center bottom;
   background-repeat: no-repeat;
 }

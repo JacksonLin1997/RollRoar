@@ -125,6 +125,9 @@ a.navbar-brand.mx-auto h4 {
     display: table;
     background-size: cover;
 } */
+.container{
+    min-height:  100%;
+}
 .col-10{
     flex: 0 0 100%;
     max-width: 100%;
