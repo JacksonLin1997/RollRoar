@@ -170,7 +170,7 @@
                                                         </div>
                                                         <div class="card-body ">
                                                             <h5 class="card-title">'.$row['gameTitle'].'</h5>
-                                                            <p class="card-text"></p>
+                                                            <p class="card-text">'.$row['gameDesc'].'</p>
                                                             <div class="time-font">
                                                                 <img src="img/main_time.png" alt="">&nbsp'.$row['expire'].'
                                                             </div>
@@ -195,7 +195,7 @@
                                                     </div>
                                                         <div class="card-body ">
                                                             <h5 class="card-title">'.$row['gameTitle'].'</h5>
-                                                            <p class="card-text"></p>
+                                                            <p class="card-text">'.$row['gameDesc'].'</p>
                                                             <div class="time-font">
                                                                 <img src="img/main_time.png" alt="">&nbsp'.$row['expire'].'
                                                             </div>
@@ -255,7 +255,7 @@
                                             </div>
                                             <div class="card-body ">
                                                 <h5 class="card-title">'.$row['gameTitle'].'</h5>
-                                                <p class="card-text"></p>
+                                                <p class="card-text">'.$row['gameDesc'].'</p>
                                                 <div class="time-font">
                                                     <img src="img/main_time.png" alt="">&nbsp'.$row['expire'].'
                                                 </div>
@@ -280,7 +280,7 @@
                                             </div>
                                             <div class="card-body ">
                                                 <h5 class="card-title">'.$row['gameTitle'].'</h5>
-                                                <p class="card-text"></p>
+                                                <p class="card-text">'.$row['gameDesc'].'</p>
                                                 <div class="time-font">
                                                     <img src="img/main_time.png" alt="">&nbsp'.$row['expire'].'
                                                 </div>
@@ -341,7 +341,7 @@
                                     </div>
                                     <div class="card-body ">
                                         <h5 class="card-title">'.$row['gameTitle'].'</h5>
-                                        <p class="card-text"></p>
+                                        <p class="card-text">'.$row['gameDesc'].'</p>
                                         <div class="time-font">
                                             <img src="img/main_time.png" alt="">&nbsp'.$row['expire'].'
                                         </div>
@@ -349,6 +349,7 @@
                                     </div>
                                 </article>
                             </div>';
+                            
                         }
                     }
                 ?>
@@ -446,3 +447,4 @@
     </body>
     
 </html>
+
