@@ -10,7 +10,7 @@
         $currentUserPoint = $_SESSION['userPoints'];
     }
 ?>
-
+ 
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -85,51 +85,7 @@
                     </form> 
                 </div>           
         </nav>
-        <!-- <div class="banner">
-            <div class="row upper-nav" style="align-items: center;">
-                <div class="col-sm-1.8">
-                    <div class="dropdown">
-                        <a class="dropdown-toggle dropbtn" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #edeadb; border-right-style:solid; padding-right:10px; border-width:0.05px; border-right-color: #edeadb;">Language</a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <a class="dropdown-item" href="#">English</a>
-                            <a class="dropdown-item" href="#">繁體中文</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-2.2">
-                    <i class="fas fa-search" style="color:#edeadb;padding-left: 15px; padding-right:5px;"></i>
-                    <input type="text" style="color:#edeadb; border-radius:10pt; border-block-color: #edeadb; background-color: transparent;"> 
-                </div>
-                <div class="col-sm-4" style="text-align: center; font-size:24px;">
-                    <a href="index.php" style="color:#edeadb; text-decoration: none;"><img src="img/logo.png" alt=""> 說說 </a>
-                </div>
-                <div class="col-sm-4">
-                    <div style="float: right;">
-                        <img src="img/coin.png">
-                        <?php
-                            if (isset($currentUserPoint)){
-                                echo '<button type="button" class="btn btn-outline-light" style="border-radius: 20pt;">$ '.$currentUserPoint.'</button>';
-                            } else {
-                                echo '<button type="button" class="btn btn-outline-light" style="border-radius: 20pt;"> ??? </button>';
-                            }
-                        ?>
-                        <a href="#"></a><img src="img/vote_noti.png" style="padding: 12px; height:300%;"></a>
-                        <img src="img/vote_user.png" class="dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="padding: 12px; height:300%; cursor: pointer;">
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <?php
-                                if (isset($currentUser)){
-                                    echo '<a class="dropdown-item" href="#">'.$currentUser.'</a>';
-                                    echo '<a class="dropdown-item" href="login.php?status=logout">登出</a>';
-                                    echo '<a class="dropdown-item" href="history.php">下注紀錄</a>';
-                                } else {
-                                    echo '<a class="dropdown-item" href="login.php">登入</a>';
-                                }
-                            ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
+        
         <!-- 輪播圖片 -->
         <div class="row">
             <div id="carousel" class="carousel slide" data-interval="false" data-ride="carousel">
@@ -207,16 +163,18 @@
                                                     <div class="row">';
                                                 }
                                                 echo 
-                                                '<div class="col-md-4" onclick="location.href=\'game.php?gameId='.$row['gameId'].'\'" style="cursor: pointer;">
+                                                '<div class="col-md-4" onclick="location.href=\'game.php?gameId='.$row['gameId'].'\'" style="cursor: pointer;">                               
                                                     <article class="card">
-                                                        <img class="card-img-top" src="gallery/'.$row['imgFullName'].'" alt="Card image cap">
+                                                        <div class="card-img">
+                                                            <img class="card-img-top" src="gallery/'.$row['imgFullName'].'" alt="Card image cap">
+                                                        </div>
                                                         <div class="card-body ">
                                                             <h5 class="card-title">'.$row['gameTitle'].'</h5>
-                                                            <p class="card-text">'.$row['gameDesc'].'</p>
+                                                            <p class="card-text"></p>
                                                             <div class="time-font">
                                                                 <img src="img/main_time.png" alt="">&nbsp'.$row['expire'].'
                                                             </div>
-                                                            <button type="button" class="btn btn-light" style="border-radius: 20px;"><img src="img/coin.png"> '.($row['poolA']+$row['poolB']).'</button>
+                                                            <button type="button" class="btn btn-light card-money" style="disabled="disabled" style="border-radius: 20px;""><img src="img/coin.png" style="width:20px; height:20px;"> '.($row['poolA']+$row['poolB']).'</button>
                                                         </div>
                                                     </article>
                                                 </div>';
@@ -230,16 +188,18 @@
                                                     <div class="row">';
                                                 }
                                                 echo 
-                                                '<div class="col-md-4" onclick="location.href=\'game.php?gameId='.$row['gameId'].'\'" style="cursor: pointer;">
+                                                '<div class="col-md-4" onclick="location.href=\'game.php?gameId='.$row['gameId'].'\'" style="cursor: pointer;">                               
                                                     <article class="card">
+                                                    <div class="card-img">
                                                         <img class="card-img-top" src="gallery/'.$row['imgFullName'].'" alt="Card image cap">
+                                                    </div>
                                                         <div class="card-body ">
                                                             <h5 class="card-title">'.$row['gameTitle'].'</h5>
-                                                            <p class="card-text">'.$row['gameDesc'].'</p>
+                                                            <p class="card-text"></p>
                                                             <div class="time-font">
                                                                 <img src="img/main_time.png" alt="">&nbsp'.$row['expire'].'
                                                             </div>
-                                                            <button type="button" class="btn btn-light" style="border-radius: 20px;"><img src="img/coin.png"> '.($row['poolA']+$row['poolB']).'</button>
+                                                            <button type="button" class="btn btn-light card-money" style="disabled="disabled" style="border-radius: 20px;""><img src="img/coin.png" style="width:20px; height:20px;"> '.($row['poolA']+$row['poolB']).'</button>
                                                         </div>
                                                     </article>
                                                 </div>';
@@ -288,16 +248,18 @@
                                         <div class="row">';
                                     }
                                     echo 
-                                    '<div class="col-md-4" onclick="location.href=\'game.php?gameId='.$row['gameId'].'\'" style="cursor: pointer;">
+                                    '<div class="col-md-4" onclick="location.href=\'game.php?gameId='.$row['gameId'].'\'" style="cursor: pointer;">                               
                                         <article class="card">
-                                            <img class="card-img-top" src="gallery/'.$row['imgFullName'].'" alt="Card image cap">
+                                            <div class="card-img">
+                                                <img class="card-img-top" src="gallery/'.$row['imgFullName'].'" alt="Card image cap">
+                                            </div>
                                             <div class="card-body ">
                                                 <h5 class="card-title">'.$row['gameTitle'].'</h5>
-                                                <p class="card-text">'.$row['gameDesc'].'</p>
+                                                <p class="card-text"></p>
                                                 <div class="time-font">
                                                     <img src="img/main_time.png" alt="">&nbsp'.$row['expire'].'
                                                 </div>
-                                                <button type="button" class="btn btn-light" style="border-radius: 20px;"><img src="img/coin.png"> '.($row['poolA']+$row['poolB']).'</button>
+                                                <button type="button" class="btn btn-light card-money" style="disabled="disabled" style="border-radius: 20px;""><img src="img/coin.png" style="width:20px; height:20px;"> '.($row['poolA']+$row['poolB']).'</button>
                                             </div>
                                         </article>
                                     </div>';
@@ -311,16 +273,18 @@
                                         <div class="row">';
                                     }
                                     echo 
-                                    '<div class="col-md-4" onclick="location.href=\'game.php?gameId='.$row['gameId'].'\'" style="cursor: pointer;">
+                                    '<div class="col-md-4" onclick="location.href=\'game.php?gameId='.$row['gameId'].'\'" style="cursor: pointer;">                               
                                         <article class="card">
-                                            <img class="card-img-top" src="gallery/'.$row['imgFullName'].'" alt="Card image cap">
+                                            <div class="card-img">
+                                                <img class="card-img-top" src="gallery/'.$row['imgFullName'].'" alt="Card image cap">
+                                            </div>
                                             <div class="card-body ">
                                                 <h5 class="card-title">'.$row['gameTitle'].'</h5>
-                                                <p class="card-text">'.$row['gameDesc'].'</p>
+                                                <p class="card-text"></p>
                                                 <div class="time-font">
                                                     <img src="img/main_time.png" alt="">&nbsp'.$row['expire'].'
                                                 </div>
-                                                <button type="button" class="btn btn-light" style="border-radius: 20px;"><img src="img/coin.png"> '.($row['poolA']+$row['poolB']).'</button>
+                                                <button type="button" class="btn btn-light card-money" style="disabled="disabled" style="border-radius: 20px;""><img src="img/coin.png" style="width:20px; height:20px;"> '.($row['poolA']+$row['poolB']).'</button>
                                             </div>
                                         </article>
                                     </div>';
@@ -372,14 +336,16 @@
                             echo 
                             '<div class="col-md-4" onclick="location.href=\'game.php?gameId='.$row['gameId'].'\'" style="cursor: pointer;">                               
                                 <article class="card">
-                                    <img class="card-img-top" src="gallery/'.$row['imgFullName'].'" alt="Card image cap">
+                                    <div class="card-img">
+                                        <img class="card-img-top" src="gallery/'.$row['imgFullName'].'" alt="Card image cap">
+                                    </div>
                                     <div class="card-body ">
                                         <h5 class="card-title">'.$row['gameTitle'].'</h5>
                                         <p class="card-text"></p>
                                         <div class="time-font">
                                             <img src="img/main_time.png" alt="">&nbsp'.$row['expire'].'
                                         </div>
-                                        <button type="button" class="btn btn-light" style="border-radius: 20px;"><img src="img/coin.png"> '.($row['poolA']+$row['poolB']).'</button>
+                                        <button type="button" class="btn btn-light card-money" style="disabled="disabled" style="border-radius: 20px;""><img src="img/coin.png" style="width:20px; height:20px;"> '.($row['poolA']+$row['poolB']).'</button>
                                     </div>
                                 </article>
                             </div>';
@@ -388,6 +354,7 @@
                 ?>
             </div>  
         </div>
+
             
         <?php
             if (isset($currentUser)){
@@ -428,8 +395,26 @@
                 }
             }
         ?>
-
+        <!-- 下方聯絡資料 -->
         <footer class="navbar-static-bottom">
+            <div class="navleft">
+                    <p class="footer-element">&copy; 2019 CHJB App Name</p>
+            </div>
+            <div class="navright">
+                <form class="form-inline">
+                    <p class="footer-element">
+                        | &emsp; Contact Us
+                    </p>
+                    <p class="footer-element">
+                        <img src="img/vote_email.png" alt="">  talktalk@gmail.com
+                    </p>
+                    <p class="footer-element">
+                        <img src="img/vote_fb.png" alt="">  說說  talktalk
+                    </p>
+                </form>
+            </div>
+        </footer>
+        <!-- <footer class="navbar-static-bottom">
             <div class="banner">
                 <div class="row">
                     <div class="col-sm-6">
@@ -457,7 +442,7 @@
                     </div>
                 </div>
             </div>
-        </footer>
+        </footer> -->
     </body>
     
 </html>

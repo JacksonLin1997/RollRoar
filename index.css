@@ -2,6 +2,7 @@
     background-color: rgb(51,62,84);
     width: 100%;
 } */
+
 input{
     outline:none;
     padding-left: 10px;
@@ -85,6 +86,20 @@ a.navbar-brand.mx-auto h4 {
     color: #edeadb;
 }
 
+.card-money{
+    border-radius: 15pt;
+    box-shadow:0px 4px rgba(20%,20%,40%,0.5);
+    font-size: 11pt;
+    width: 95px;
+    height: 35px;
+}
+
+.container{
+    min-height: 100%;
+    /* margin-left: 20%;
+    margin-right: 20% */
+}
+
 .btn:disabled{
     opacity: 1;
 }
@@ -114,8 +129,27 @@ a.navbar-brand.mx-auto h4 {
     font-family : "Microsoft JhengHei";
 }
 
+.card-deck{
+    margin: 0pt; 
+    margin-bottom: 25pt;
+}
 .card{
-    margin:2%;
+    margin: 12pt;
+}
+
+.card-img{
+    height:200px;
+    overflow:hidden;
+}
+
+.card-text{
+    overflow:hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+    white-space: normal;
 }
 
 .btn-outline-dark{
@@ -132,9 +166,9 @@ a.navbar-brand.mx-auto h4 {
     margin: 10px;
 }
 
-.btn-light{
+/* .btn-light{
     box-shadow:3pt !important;
-}
+} */
 
 
 .dark-arrow-right{
@@ -154,16 +188,26 @@ a.navbar-brand.mx-auto h4 {
     padding-left: 2%;
 }
 
-.footer-element{
-    color: #edeadb;
-    margin: 2.5vh;
-    font-size: 14px;
-}
-
 .time-font{
     font-family:"Microsoft JhengHei";
     font-size: 12px;
 }
+
+footer{
+    background-color: #333e54;
+    margin-top: 10%;
+    display: flex;
+     /* position: absolute;  */
+    /* bottom: 0; */
+    width: 100%; 
+}
+.footer-element{
+    color: #edeadb;
+    margin: 2.5vh;
+    font-size: 14px;
+
+}
+
 
 .gallery-upload {
     width: 100%;
