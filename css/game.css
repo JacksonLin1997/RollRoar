@@ -85,7 +85,7 @@
 
 .subject{
     width: 1920px;
-    background-image: url('img/vote_bg1.png');
+    background-image: url('../img/vote_bg1.png');
     background-repeat: no-repeat;
     background-position: center;
     background-color: #edead2;
@@ -114,7 +114,7 @@
 
 .voting{
     width: 1920px;
-    background-image: url('img/vote_bg2.png');
+    background-image: url('../img/vote_bg2.png');
     background-repeat: no-repeat;
     background-color: #ced3d7;
     position: relative;
@@ -370,7 +370,7 @@
     padding-left: 80px;
     border-radius: 40px;
     background-color: #fff;
-    background-image: url(img/popup_window/window_coin.png);
+    background-image: url(../img/popup_window/window_coin.png);
     background-position: 16px;
     background-repeat: no-repeat;
 }
@@ -384,7 +384,7 @@
     width: 70px;
     height: 70px;
     background-color: #333b4b;
-    background: url(img/popup_window/coin5.png) no-repeat;
+    background: url(../img/popup_window/coin5.png) no-repeat;
     cursor: pointer;
     border-radius: 50%;
     border: none;
@@ -395,7 +395,7 @@
     width: 70px;
     height: 70px;
     background-color: #333b4b;
-    background: url(img/popup_window/coin10.png) no-repeat;
+    background: url(../img/popup_window/coin10.png) no-repeat;
     cursor: pointer;
     border-radius: 50%;
     border: none;
@@ -406,7 +406,7 @@
     width: 70px;
     height: 70px;
     background-color: #333b4b;
-    background: url(img/popup_window/coin50.png) no-repeat;
+    background: url(../img/popup_window/coin50.png) no-repeat;
     cursor: pointer;
     border-radius: 50%;
     border: none;
@@ -417,7 +417,7 @@
     width: 100px;
     height: 60px;
     background-color: #333b4b;
-    background: url(img/popup_window/coin100.png) no-repeat;
+    background: url(../img/popup_window/coin100.png) no-repeat;
     cursor: pointer;
     border: none;
     transition-duration: 0.1s;
@@ -427,7 +427,7 @@
     width: 100px;
     height: 60px;
     background-color: #333b4b;
-    background: url(img/popup_window/coin500.png) no-repeat;
+    background: url(../img/popup_window/coin500.png) no-repeat;
     cursor: pointer;
     border: none;
     transition-duration: 0.1s;
@@ -437,7 +437,7 @@
     width: 130px;
     height: 60px;
     background-color: #333b4b;
-    background: url(img/popup_window/coin1000.png) no-repeat;
+    background: url(../img/popup_window/coin1000.png) no-repeat;
     cursor: pointer;
     border: none;
     transition-duration: 0.1s;
@@ -447,7 +447,7 @@
     width: 70px;
     height: 70px;
     background-color: #333b4b;
-    background: url(img/popup_window/coin0.png) no-repeat;
+    background: url(../img/popup_window/coin0.png) no-repeat;
     cursor: pointer;
     border-radius: 50%;
     border: none;

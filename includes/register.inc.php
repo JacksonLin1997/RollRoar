@@ -62,7 +62,10 @@ if (isset($_POST['signup-submit'])){
             }
             else {
 
-                $sql = "INSERT INTO users (uidUsers, emailUsers, pwdUsers, pointsUsers) VALUES (?, ?, ?, ?)";
+                date_default_timezone_set("Asia/Taipei");
+                $register_time = time();
+
+                $sql = "INSERT INTO users (uidUsers, emailUsers, pwdUsers, pointsUsers, last_login) VALUES (?, ?, ?, ?, ?)";
                 $stmt = mysqli_stmt_init($conn);
                 if (!mysqli_stmt_prepare($stmt, $sql)){
                     header("location: ../register.php?error=sqlerror");
@@ -70,7 +73,7 @@ if (isset($_POST['signup-submit'])){
                 }
                 else {
                     $hashedPwd = password_hash($password, PASSWORD_DEFAULT);
-                    mysqli_stmt_bind_param($stmt, "sssi", $username, $email, $hashedPwd, $points);
+                    mysqli_stmt_bind_param($stmt, "sssii", $username, $email, $hashedPwd, $points, $register_time);
                     mysqli_stmt_execute($stmt);
 
                     session_start();

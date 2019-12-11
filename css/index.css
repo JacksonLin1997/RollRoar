@@ -3,7 +3,7 @@
     width: 100%;
 } */
 
-input{
+.search input{
     outline:none;
     padding-left: 10px;
     color:#edeadb; 
@@ -172,11 +172,11 @@ a.navbar-brand.mx-auto h4 {
 
 
 .dark-arrow-right{
-    background-image: url("img/right-arrow.png")!important ;
+    background-image: url("../img/right-arrow.png")!important ;
 
 }
 .dark-arrow-left{
-    background-image: url("img/left-arrow.png")!important ;
+    background-image: url("../img/left-arrow.png")!important ;
 
 }
 

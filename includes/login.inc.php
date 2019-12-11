@@ -34,6 +34,12 @@ if (isset($_POST['login-submit'])){
                     $_SESSION['userUid'] = $row['uidUsers'];
                     $_SESSION['userPoints'] = $row['pointsUsers'];
 
+                    $currentUser = $_SESSION['userUid'];
+                    date_default_timezone_set("Asia/Taipei");
+                    $login_time = time();
+                    $sql2 = "UPDATE users SET last_login=$login_time WHERE uidUsers='$currentUser'";
+                    mysqli_query($conn, $sql2);
+
                     header("location: ../index.php?login=success");
                     exit();
                 }

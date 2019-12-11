@@ -5,6 +5,7 @@ session_start();
 $currentUser = $_SESSION['userUid'];
 $currentUserPoint = $_SESSION['userPoints'];
 
+date_default_timezone_set("Asia/Taipei");
 $timeStamp = time();
 
 $gameId = $_GET['gameId'];

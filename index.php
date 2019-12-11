@@ -20,11 +20,12 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <script src="https://kit.fontawesome.com/0920bde990.js" crossorigin="anonymous"></script>
+        <!-- 下面這行script不知為啥會讓首頁每次剛打開都會重新整理一次 -->
+        <!-- <script src="https://kit.fontawesome.com/0920bde990.js" crossorigin="anonymous"></script> -->
         <!-- title name-->
         <title>說說 TalkTalk</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="css/index.css">
     </head>
 
     <body class="background text-type">
@@ -67,7 +68,7 @@
                                 echo '<button type="button" class="btn btn-outline-light" style="border-radius: 20pt;">$ ???</button>';
                             }
                         ?>
-                        <img src="img/vote_noti.png"  style="padding: 12px; height:300%;">
+                        <img src="img/vote_noti.png"  style="padding: 12px;">
                         <div class="dropdown">
                             <img src="img/vote_user.png" class="dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"style="padding: 12px; height:56px; cursor: pointer;">
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
@@ -141,7 +142,7 @@
                 <div class="carousel-inner" >
                     <?php
                         if (isset($currentUser)){
-                            $sql3 = "SELECT gameId FROM history WHERE person='$currentUser' ORDER BY gameId DESC";
+                            $sql3 = "SELECT gameId, reward FROM history WHERE person='$currentUser' ORDER BY gameId DESC";
                             $result3 = mysqli_query($conn, $sql3);
                             $resultCheck3 = mysqli_num_rows($result3);
                             if ($resultCheck3 > 0){
@@ -163,9 +164,9 @@
                                                     <div class="row">';
                                                 }
                                                 echo 
-                                                '<div class="col-md-4" onclick="location.href=\'game.php?gameId='.$row['gameId'].'\'" style="cursor: pointer;">                               
+                                                '<div class="col-md-4">                               
                                                     <article class="card">
-                                                        <div class="card-img">
+                                                        <div class="card-img" onclick="location.href=\'game.php?gameId='.$row['gameId'].'\'" style="cursor: pointer;">
                                                             <img class="card-img-top" src="gallery/'.$row['imgFullName'].'" alt="Card image cap">
                                                         </div>
                                                         <div class="card-body ">
@@ -174,8 +175,15 @@
                                                             <div class="time-font">
                                                                 <img src="img/main_time.png" alt="">&nbsp'.$row['expire'].'
                                                             </div>
-                                                            <button type="button" class="btn btn-light card-money" style="disabled="disabled" style="border-radius: 20px;""><img src="img/coin.png" style="width:20px; height:20px;"> '.($row['poolA']+$row['poolB']).'</button>
-                                                        </div>
+                                                            <button type="button" class="btn btn-light card-money" style="disabled="disabled" style="border-radius: 20px;""><img src="img/coin.png" style="width:20px; height:20px;"> '.($row['poolA']+$row['poolB']).'</button>';
+                                                            if (isset($row3['reward'])){
+                                                                if ($row3['reward'] == 0){
+                                                                    echo '<button type="button" class="btn btn-light card-money" style="color: brown;" onclick="location.href=\'egg.php?gameId='.$tmpGameId.'&win=0&reward='.$row3['reward'].'\'">看結果</button>';
+                                                                } else {
+                                                                    echo '<button type="button" class="btn btn-light card-money" style="color: brown;" onclick="location.href=\'egg.php?gameId='.$tmpGameId.'&win=1&reward='.$row3['reward'].'\'">看結果</button>';
+                                                                }
+                                                            }
+                                                        echo '</div>
                                                     </article>
                                                 </div>';
                                                 if ($game_total == $resultCheck3 || $game_total == 3){
@@ -188,9 +196,9 @@
                                                     <div class="row">';
                                                 }
                                                 echo 
-                                                '<div class="col-md-4" onclick="location.href=\'game.php?gameId='.$row['gameId'].'\'" style="cursor: pointer;">                               
+                                                '<div class="col-md-4">                               
                                                     <article class="card">
-                                                    <div class="card-img">
+                                                    <div class="card-img" onclick="location.href=\'game.php?gameId='.$row['gameId'].'\'" style="cursor: pointer;">
                                                         <img class="card-img-top" src="gallery/'.$row['imgFullName'].'" alt="Card image cap">
                                                     </div>
                                                         <div class="card-body ">
@@ -199,8 +207,15 @@
                                                             <div class="time-font">
                                                                 <img src="img/main_time.png" alt="">&nbsp'.$row['expire'].'
                                                             </div>
-                                                            <button type="button" class="btn btn-light card-money" style="disabled="disabled" style="border-radius: 20px;""><img src="img/coin.png" style="width:20px; height:20px;"> '.($row['poolA']+$row['poolB']).'</button>
-                                                        </div>
+                                                            <button type="button" class="btn btn-light card-money" style="disabled="disabled" style="border-radius: 20px;""><img src="img/coin.png" style="width:20px; height:20px;"> '.($row['poolA']+$row['poolB']).'</button>';
+                                                            if (isset($row3['reward'])){
+                                                                if ($row3['reward'] == 0){
+                                                                    echo '<button type="button" class="btn btn-light card-money" style="color: brown;" onclick="location.href=\'egg.php?gameId='.$tmpGameId.'&win=0&reward='.$row3['reward'].'\'">看結果</button>';
+                                                                } else {
+                                                                    echo '<button type="button" class="btn btn-light card-money" style="color: brown;" onclick="location.href=\'egg.php?gameId='.$tmpGameId.'&win=1&reward='.$row3['reward'].'\'">看結果</button>';
+                                                                }
+                                                            }
+                                                        echo '</div>
                                                     </article>
                                                 </div>';
                                                 if ($game_total == $resultCheck3 || ($game_total%3) == 0){
@@ -231,7 +246,7 @@
             <div id="carousel_3" class="carousel slide" data-interval="false" data-ride="carousel_3">
                 <div class="carousel-inner" >
                     <?php
-                        $sql = "SELECT * FROM games ORDER BY gameOrder DESC";
+                        $sql = "SELECT * FROM games ORDER BY gameId DESC";
                         $stmt = mysqli_stmt_init($conn);
                         if (!mysqli_stmt_prepare($stmt, $sql)){
                             echo "SQL statement failed!";
@@ -242,15 +257,21 @@
                             $game_total = 1;
 
                             while ($row = mysqli_fetch_assoc($result)){
+
+                                date_default_timezone_set("Asia/Taipei");
+                                $nowTime = time();
+                                $expireTime = strtotime($row['expire']);
+                                $remainTime = $expireTime - $nowTime;
+
                                 if ($game_total < 4){
                                     if ($game_total == 1){
                                         echo '<div class="carousel-item down-item active">
                                         <div class="row">';
                                     }
                                     echo 
-                                    '<div class="col-md-4" onclick="location.href=\'game.php?gameId='.$row['gameId'].'\'" style="cursor: pointer;">                               
+                                    '<div class="col-md-4">                               
                                         <article class="card">
-                                            <div class="card-img">
+                                            <div class="card-img" onclick="location.href=\'game.php?gameId='.$row['gameId'].'\'" style="cursor: pointer;">
                                                 <img class="card-img-top" src="gallery/'.$row['imgFullName'].'" alt="Card image cap">
                                             </div>
                                             <div class="card-body ">
@@ -259,8 +280,11 @@
                                                 <div class="time-font">
                                                     <img src="img/main_time.png" alt="">&nbsp'.$row['expire'].'
                                                 </div>
-                                                <button type="button" class="btn btn-light card-money" style="disabled="disabled" style="border-radius: 20px;""><img src="img/coin.png" style="width:20px; height:20px;"> '.($row['poolA']+$row['poolB']).'</button>
-                                            </div>
+                                                <button type="button" class="btn btn-light card-money" style="disabled="disabled" style="border-radius: 20px;"><img src="img/coin.png" style="width:20px; height:20px;"> '.($row['poolA']+$row['poolB']).'</button>';
+                                                if ($remainTime <= 0){
+                                                    echo '<button type="button" class="btn btn-light card-money" style="color: darkolivegreen;">已結束</button>';
+                                                }
+                                            echo '</div>
                                         </article>
                                     </div>';
                                     if ($game_total == $resultCheck || $game_total == 3){
@@ -273,9 +297,9 @@
                                         <div class="row">';
                                     }
                                     echo 
-                                    '<div class="col-md-4" onclick="location.href=\'game.php?gameId='.$row['gameId'].'\'" style="cursor: pointer;">                               
+                                    '<div class="col-md-4">                               
                                         <article class="card">
-                                            <div class="card-img">
+                                            <div class="card-img" onclick="location.href=\'game.php?gameId='.$row['gameId'].'\'" style="cursor: pointer;">
                                                 <img class="card-img-top" src="gallery/'.$row['imgFullName'].'" alt="Card image cap">
                                             </div>
                                             <div class="card-body ">
@@ -284,8 +308,11 @@
                                                 <div class="time-font">
                                                     <img src="img/main_time.png" alt="">&nbsp'.$row['expire'].'
                                                 </div>
-                                                <button type="button" class="btn btn-light card-money" style="disabled="disabled" style="border-radius: 20px;""><img src="img/coin.png" style="width:20px; height:20px;"> '.($row['poolA']+$row['poolB']).'</button>
-                                            </div>
+                                                <button type="button" class="btn btn-light card-money" style="disabled="disabled" style="border-radius: 20px;""><img src="img/coin.png" style="width:20px; height:20px;"> '.($row['poolA']+$row['poolB']).'</button>';
+                                                if ($remainTime <= 0){
+                                                    echo '<button type="button" class="btn btn-light card-money" style="color: darkolivegreen;">已結束</button>';
+                                                }
+                                            echo '</div>
                                         </article>
                                     </div>';
                                     if ($game_total == $resultCheck || ($game_total%3) == 0){
@@ -324,7 +351,7 @@
             <!-- 多圖排列 -->
             <div class="row">
                 <?php
-                    $sql = "SELECT * FROM games ORDER BY gameOrder DESC";
+                    $sql = "SELECT * FROM games ORDER BY gameId DESC";
                     $stmt = mysqli_stmt_init($conn);
                     if (!mysqli_stmt_prepare($stmt, $sql)){
                         echo "SQL statement failed!";
@@ -333,10 +360,16 @@
                         $result = mysqli_stmt_get_result($stmt);
 
                         while ($row = mysqli_fetch_assoc($result)){
+
+                            date_default_timezone_set("Asia/Taipei");
+                            $nowTime = time();
+                            $expireTime = strtotime($row['expire']);
+                            $remainTime = $expireTime - $nowTime;
+
                             echo 
-                            '<div class="col-md-4" onclick="location.href=\'game.php?gameId='.$row['gameId'].'\'" style="cursor: pointer;">                               
+                            '<div class="col-md-4">                               
                                 <article class="card">
-                                    <div class="card-img">
+                                    <div class="card-img" onclick="location.href=\'game.php?gameId='.$row['gameId'].'\'" style="cursor: pointer;">
                                         <img class="card-img-top" src="gallery/'.$row['imgFullName'].'" alt="Card image cap">
                                     </div>
                                     <div class="card-body ">
@@ -345,8 +378,11 @@
                                         <div class="time-font">
                                             <img src="img/main_time.png" alt="">&nbsp'.$row['expire'].'
                                         </div>
-                                        <button type="button" class="btn btn-light card-money" style="disabled="disabled" style="border-radius: 20px;""><img src="img/coin.png" style="width:20px; height:20px;"> '.($row['poolA']+$row['poolB']).'</button>
-                                    </div>
+                                        <button type="button" class="btn btn-light card-money" style="disabled="disabled" style="border-radius: 20px;""><img src="img/coin.png" style="width:20px; height:20px;"> '.($row['poolA']+$row['poolB']).'</button>';
+                                        if ($remainTime <= 0){
+                                            echo '<button type="button" class="btn btn-light card-money" style="color: darkolivegreen;">已結束</button>';
+                                        }
+                                    echo '</div>
                                 </article>
                             </div>';
                             
@@ -399,7 +435,7 @@
         <!-- 下方聯絡資料 -->
         <footer class="navbar-static-bottom">
             <div class="navleft">
-                    <p class="footer-element">&copy; 2019 CHJB App Name</p>
+                    <p class="footer-element">&copy; 2019 CHJB TalkTalk</p>
             </div>
             <div class="navright">
                 <form class="form-inline">
@@ -410,7 +446,7 @@
                         <img src="img/vote_email.png" alt="">  talktalk@gmail.com
                     </p>
                     <p class="footer-element">
-                        <img src="img/vote_fb.png" alt="">  說說  talktalk
+                        <img src="img/vote_fb.png" alt="">  說說  TalkTalk
                     </p>
                 </form>
             </div>

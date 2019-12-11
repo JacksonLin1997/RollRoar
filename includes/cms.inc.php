@@ -23,7 +23,7 @@ if (isset($_POST['selectGame'])){
         header("location: ../cms.php?gameId=$gameId");
         exit();
     } else {
-        header("location: ../cms.php?error=empty");
+        header("location: ../cms.php?error=empty_game");
         exit();
     }
 }
@@ -82,34 +82,53 @@ elseif (isset($_POST['gameoverB'])){
     header("location: ../cms.php");
     exit();
 }
-elseif (isset($_POST['reset_history'])){
+// elseif (isset($_POST['reset_history'])){
 
-    $sql = "UPDATE games SET poolA=0, poolB=0;
-    UPDATE users SET pointsUsers=1000;
-    TRUNCATE TABLE history;";
+//     $sql = "UPDATE games SET poolA=0, poolB=0;
+//     UPDATE users SET pointsUsers=1000;
+//     TRUNCATE TABLE history;";
 
-    mysqli_multi_query($conn, $sql);
+//     mysqli_multi_query($conn, $sql);
 
-    header("location: ../cms.php");
-    exit();
-}
-elseif (isset($_POST['reset_games'])){
+//     header("location: ../cms.php");
+//     exit();
+// }
+// elseif (isset($_POST['reset_games'])){
 
-    $sql = "TRUNCATE TABLE games";
-    mysqli_query($conn, $sql);
-
-    header("location: ../cms.php");
-    exit();
-}
-// elseif (isset($_POST['add_points'])){
-
-//     $extra = $_POST['extra_points'];
-//     $sql = "UPDATE users SET pointsUsers=pointsUsers+$extra";
+//     $sql = "TRUNCATE TABLE games";
 //     mysqli_query($conn, $sql);
 
 //     header("location: ../cms.php");
 //     exit();
 // }
+elseif (isset($_POST['add_points'])){
+
+    if (!empty($_POST['user_name'])){
+        $user_name = $_POST['user_name'];
+        if ($user_name == 'daily_bonus'){
+            $sql = "UPDATE users SET pointsUsers=pointsUsers+100";
+            mysqli_query($conn, $sql);
+            header("location: ../cms.php?error=daily_bonus_success");
+            exit();
+        } else {
+            $sql5 = "SELECT * FROM users WHERE uidUsers='$user_name'";
+            $result5 = mysqli_query($conn, $sql5);
+            $resultCheck5 = mysqli_num_rows($result5);
+            if ($resultCheck5 > 0){
+                $sql = "UPDATE users SET pointsUsers=pointsUsers+100 WHERE uidUsers='$user_name'";
+                mysqli_query($conn, $sql);
+                header("location: ../cms.php?error=add_points_success");
+                exit();
+            } else {
+                header("location: ../cms.php?error=user_not_exist");
+                exit();
+            }
+        }
+    } else {
+        header("location: ../cms.php?error=empty_username");
+        exit();
+    }
+}
 else {
     header("location: ../cms.php");
     exit();

@@ -52,7 +52,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="game.css">
+    <link rel="stylesheet" href="css/game.css">
 </head>
 <body>
     
@@ -100,24 +100,41 @@
                 $expireTime = strtotime($row['expire']);
 
                 $remainTime = $expireTime - $nowTime;
-                $remain_minute = floor(($remainTime/60)%60);
+                $remain_minute = floor(($remainTime/60)%60)+1;
                 $reamin_hour = floor(($remainTime/3600)%24);
                 $remain_day = floor(($remainTime/86400));
-            
-                echo 
-                '<div class="countdown">
-                    <div class="day">'.$remain_day.'
-                        <div class="day_text">Day</div>
-                    </div>
-                    <div class="hour1">'.floor($reamin_hour/10).'
-                        <div class="hour_text">Hour</div>
-                    </div>
-                    <div class="hour2">'.($reamin_hour%10).'</div>
-                    <div class="minute1">'.floor($remain_minute/10).'
-                        <div class="minute_text">Minute</div>
-                    </div>
-                    <div class="minute2">'.($remain_minute%10).'</div>
-                </div>';
+
+                if ($remainTime > 0){
+                    echo 
+                    '<div class="countdown">
+                        <div class="day">'.$remain_day.'
+                            <div class="day_text">Day</div>
+                        </div>
+                        <div class="hour1">'.floor($reamin_hour/10).'
+                            <div class="hour_text">Hour</div>
+                        </div>
+                        <div class="hour2">'.($reamin_hour%10).'</div>
+                        <div class="minute1">'.floor($remain_minute/10).'
+                            <div class="minute_text">Minute</div>
+                        </div>
+                        <div class="minute2">'.($remain_minute%10).'</div>
+                    </div>';
+                } else {
+                    echo 
+                    '<div class="countdown">
+                        <div class="day">0
+                            <div class="day_text">Day</div>
+                        </div>
+                        <div class="hour1">0
+                            <div class="hour_text">Hour</div>
+                        </div>
+                        <div class="hour2">0</div>
+                        <div class="minute1">0
+                            <div class="minute_text">Minute</div>
+                        </div>
+                        <div class="minute2">0</div>
+                    </div>';
+                }
             ?>
         </div>
         <div class="question">
@@ -169,7 +186,7 @@
                 </div>
                 <?php
                     if (isset($currentUser)){
-                        if ($remainTime){
+                        if ($remainTime > 0){
                             $sql = "SELECT person FROM history WHERE person=? AND gameId=$gameId";
                             $stmt = mysqli_stmt_init($conn);
                             if (mysqli_stmt_prepare($stmt, $sql)){
@@ -266,10 +283,18 @@
                     <img src="img/vote_user.png" alt="">
                     <?php
                         if (isset($currentUser)){
-                            if ($resultCheck > 0){
-                                echo '<input type="text" placeholder="輸入我的留言...">';
-                            } else {
-                                echo '<input type="text" placeholder="投票以開啟留言功能！" readonly>';
+                            $sql = "SELECT person FROM history WHERE person=? AND gameId=$gameId";
+                            $stmt = mysqli_stmt_init($conn);
+                            if (mysqli_stmt_prepare($stmt, $sql)){
+                                mysqli_stmt_bind_param($stmt, "s", $currentUser);
+                                mysqli_stmt_execute($stmt);
+                                mysqli_stmt_store_result($stmt);
+                                $resultCheck = mysqli_stmt_num_rows($stmt);
+                                if ($resultCheck > 0){
+                                    echo '<input type="text" placeholder="輸入我的留言...">';
+                                } else {
+                                    echo '<input type="text" placeholder="投票以開啟留言功能！" readonly>';
+                                }
                             }
                         } else {
                             echo '<input type="text" placeholder="登入以查看留言版！" readonly>';
@@ -293,7 +318,27 @@
         </div>
     </div>
 
-    <script src="game.js"></script>
+    <script>
+
+        var modal = document.getElementById("myModal");
+        var btn = document.getElementById("myBtn");
+        var span = document.getElementsByClassName("close")[0];
+
+        btn.onclick = function() {
+        modal.style.display = "block";
+        }
+
+        span.onclick = function() {
+        modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+    </script>
 
 </body>
 </html>
